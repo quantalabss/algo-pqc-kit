@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "algo-pqc-kit"
+version = "0.1.0"
+description = "Algorand-native post-quantum cryptography developer toolkit — Falcon-1024 accounts, M-of-N multisig, and AVM smart contract templates"
+readme = "README.md"
+license = { text = "MIT OR Apache-2.0" }
+authors = [
+    { name = "QuantaLabs", email = "contact@quantalabs.cc" }
+]
+keywords = [
+    "algorand", "post-quantum", "falcon", "multisig", "pqc",
+    "blockchain", "cryptography", "algokit", "avm"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "py-algorand-sdk>=2.7.0",
+    "algokit-utils>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov",
+    "puyapy>=5.0",
+    "algorand-python-testing>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/quantachain/algo-pqc-kit"
+Documentation = "https://algo-pqc-kit.readthedocs.io"
+Repository = "https://github.com/quantachain/algo-pqc-kit"
+Issues = "https://github.com/quantachain/algo-pqc-kit/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sdk*"]

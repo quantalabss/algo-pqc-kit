@@ -1,0 +1,31 @@
+#pragma version 12
+#pragma typetrack false
+
+// falcon_lsig.falcon_single_lsig() -> uint64:
+main:
+    bytecblock TMPL_PUBKEY
+    // contracts/falcon_lsig.py:56
+    // public_key = TemplateVar[Bytes]("PUBKEY")
+    bytec_0 // TMPL_PUBKEY
+    // contracts/falcon_lsig.py:58-59
+    // # Prevent rekey — critical for account security
+    // assert Txn.rekey_to == Global.zero_address, "Rekey not allowed on PQC accounts"
+    txn RekeyTo
+    global ZeroAddress
+    ==
+    assert // Rekey not allowed on PQC accounts
+    // contracts/falcon_lsig.py:65-66
+    // # The signed message is the transaction ID
+    // message = Txn.tx_id
+    txn TxID
+    // contracts/falcon_lsig.py:61-63
+    // # Signature is passed as the first transaction argument
+    // # In a LogicSig context, args are accessible via Arg opcode
+    // signature = op.arg(0)  # 1232-byte Falcon-1024 signature
+    arg_0
+    // contracts/falcon_lsig.py:68-69
+    // # Verify the Falcon-1024 signature using AVM v12 opcode
+    // return op.falcon_verify(message, signature, public_key)
+    uncover 2
+    falcon_verify
+    return

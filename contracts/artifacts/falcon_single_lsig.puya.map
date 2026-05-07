@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "sources": [
+    "../falcon_lsig.py"
+  ],
+  "mappings": "AAuDiB;AAGN;;AAAgB;;AAAhB;AAAP;AAOU;;AAHE;AAML;;AAAA;AAAP",
+  "op_pc_offset": 1,
+  "pc_events": {
+    "0": {
+      "op": "bytec_0 // TMPL_PUBKEY",
+      "defined_out": [
+        "public_key#0"
+      ],
+      "stack_out": [
+        "public_key#0"
+      ]
+    },
+    "1": {
+      "op": "txn RekeyTo",
+      "defined_out": [
+        "public_key#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "public_key#0",
+        "tmp%0#0"
+      ]
+    },
+    "3": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "public_key#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "public_key#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "5": {
+      "op": "==",
+      "defined_out": [
+        "public_key#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "public_key#0",
+        "tmp%2#0"
+      ]
+    },
+    "6": {
+      "error": "Rekey not allowed on PQC accounts",
+      "op": "assert // Rekey not allowed on PQC accounts",
+      "stack_out": [
+        "public_key#0"
+      ]
+    },
+    "7": {
+      "op": "txn TxID",
+      "defined_out": [
+        "message#0",
+        "public_key#0"
+      ],
+      "stack_out": [
+        "public_key#0",
+        "message#0"
+      ]
+    },
+    "9": {
+      "op": "arg_0",
+      "defined_out": [
+        "message#0",
+        "public_key#0",
+        "signature#0"
+      ],
+      "stack_out": [
+        "public_key#0",
+        "message#0",
+        "signature#0"
+      ]
+    },
+    "10": {
+      "op": "uncover 2",
+      "stack_out": [
+        "message#0",
+        "signature#0",
+        "public_key#0"
+      ]
+    },
+    "12": {
+      "op": "falcon_verify",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "13": {
+      "op": "return",
+      "stack_out": []
+    }
+  }
+}
