@@ -84,15 +84,20 @@ class PQCDao(ARC4Contract):
         n = public_keys.length
         assert threshold >= UInt64(1), "Threshold must be >= 1"
         assert threshold <= n, "Threshold cannot exceed member count"
-        assert n >= UInt64(2), "DAO requires at least 2 members"
+        assert n >= UInt64(1), "DAO requires at least 1 member"
 
         self.dao_name.value = dao_name
         self.threshold.value = threshold
-        self.num_members.value = n
         self.proposal_count.value = UInt64(0)
-
-        # Store public keys in box storage
-        for i in urange(n):
+        self.num_members.value = n
+        
+    @arc4.abimethod
+    def bootstrap(self, public_keys: arc4.DynamicArray[arc4.DynamicBytes]) -> None:
+        """
+        Allocate boxes for the public keys.
+        Requires the app to be funded first.
+        """
+        for i in urange(public_keys.length):
             box_key = b"pk_" + op.itob(i)
             op.Box.put(box_key, public_keys[i].bytes)
 

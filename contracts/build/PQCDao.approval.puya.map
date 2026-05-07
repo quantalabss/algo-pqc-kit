@@ -3,7 +3,7 @@
   "sources": [
     "../pqc_dao.py"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAqCA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;AA2BK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAoBG;;AAAA;AAAA;AACO;AAAA;;AAAA;AAAA;;AAAA;AAAP;AACO;AAAK;AAAL;AAAP;AAEA;;;;;;;;;;AAAA;;AAAA;AACA;AAAA;;AAAA;AACA;AAAA;AAAA;AACA;AAA4B;AAA5B;AAGS;;;AAAjB;;AAAA;;AAAA;AAAA;AAAA;;AAAA;;;AAC+B;;AAAA;AAAA;AAAT;;AAAA;AAAA;;;;AACU;;AAAA;;AAAA;;;AAApB;AAFK;AAAA;;;;;;AA9BZ;AAAA;;;;;;;;AAkCA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAiCiB;AAAA;AAAA;AAAA;AACc;AAAc;AAAd;AAA5B;AAAA;AAAA;AAE4B;AAAA;AAAA;AAAA;AAArB;;AAAA;AAAA;;AAAA;AAAP;AACO;;AAAA;AAAP;AAIY;;AAAA;AAAA;AAAA;;AAER;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAEE;;AAAA;AAAA;AAAA;;AAFF;AAAA;AAAA;AAAA;;AAOO;AAAX;;AACS;;;AAAjB;;AAAA;;AAAA;AAAA;AAAA;;AAAA;;;AACkB;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AACO;AAAA;AAAA;AAAA;AAAN;;AAAA;AAAP;AAEmB;AAAT;;AAAA;AAAA;AACO;AACjB;;;;AAE6B;;AAAA;;AAAA;;;AAA1B;;AAAA;AAAA;;AAAA;AAAf;;;AACgB;;AAAY;AAAZ;AAAA;;AATC;;AAAA;AAAA;;;;;;AAWU;AAAA;AAAA;AAAA;AAAZ;;AAAA;AAAP;AAGA;AAGQ;;AACC;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AAAA;AAAA;;AAAA;;;;;;;;;;;;AAJT;;;;;;AAAA;AASI;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAIU;;AAAR;AAJF;AAMO;;;;;;;AAAA;;AAAA;AAAX;AAAA;AAhFH;AAAA;AAAA;AAAA;AAAA;AAAA;AAuFU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA",
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAqCA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;AA2BK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAoBG;;AAAA;AAAA;AACO;AAAA;;AAAA;AAAA;;AAAA;AAAP;AACA;AAAA;AAEA;;;;;;;;;;AAAA;;AAAA;AACA;AAAA;;AAAA;AACA;AAA4B;AAA5B;AACA;AAAA;AAAA;AA3BH;AAAA;;;;AA6BA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAMY;;;AAAjB;;AAAA;;AAAA;AAAA;AAAA;;AAAA;;;AAC+B;;AAAA;AAAA;AAAT;;AAAA;AAAA;;;;AACU;;AAAA;;AAAA;;;AAApB;AAFK;AAAA;;;;;;AANZ;AAAA;;;;;;;;AAUA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAiCiB;AAAA;AAAA;AAAA;AACc;AAAc;AAAd;AAA5B;AAAA;AAAA;AAE4B;AAAA;AAAA;AAAA;AAArB;;AAAA;AAAA;;AAAA;AAAP;AACO;;AAAA;AAAP;AAIY;;AAAA;AAAA;AAAA;;AAER;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAEE;;AAAA;AAAA;AAAA;;AAFF;AAAA;AAAA;AAAA;;AAOO;AAAX;;AACS;;;AAAjB;;AAAA;;AAAA;AAAA;AAAA;;AAAA;;;AACkB;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AACO;AAAA;AAAA;AAAA;AAAN;;AAAA;AAAP;AAEmB;AAAT;;AAAA;AAAA;AACO;AACjB;;;;AAE6B;;AAAA;;AAAA;;;AAA1B;;AAAA;AAAA;;AAAA;AAAf;;;AACgB;;AAAY;AAAZ;AAAA;;AATC;;AAAA;AAAA;;;;;;AAWU;AAAA;AAAA;AAAA;AAAZ;;AAAA;AAAP;AAGA;AAGQ;;AACC;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AAAA;AAAA;;AAAA;;;;;;;;;;;;AAJT;;;;;;AAAA;AASI;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAIU;;AAAR;AAJF;AAMO;;;;;;;AAAA;;AAAA;AAAX;AAAA;AAhFH;AAAA;AAAA;AAAA;AAAA;AAAA;AAuFU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQU;AAAA;AAAA;AAAA;AAHV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -48,27 +48,30 @@
       ]
     },
     "61": {
-      "op": "bz main_create_NoOp@10",
+      "op": "bz main_create_NoOp@11",
       "stack_out": []
     },
     "64": {
-      "op": "pushbytess 0x1833c523 0x6d8fba74 0xc650d5a4 0xe27d501d // method \"submit_proposal(string,address,uint64,byte[][],uint64[])uint64\", method \"get_proposal_count()uint64\", method \"get_threshold()uint64\", method \"get_member_count()uint64\"",
+      "op": "pushbytess 0x2767e5b0 0x1833c523 0x6d8fba74 0xc650d5a4 0xe27d501d // method \"bootstrap(byte[][])void\", method \"submit_proposal(string,address,uint64,byte[][],uint64[])uint64\", method \"get_proposal_count()uint64\", method \"get_threshold()uint64\", method \"get_member_count()uint64\"",
       "defined_out": [
+        "Method(bootstrap(byte[][])void)",
         "Method(get_member_count()uint64)",
         "Method(get_proposal_count()uint64)",
         "Method(get_threshold()uint64)",
         "Method(submit_proposal(string,address,uint64,byte[][],uint64[])uint64)"
       ],
       "stack_out": [
+        "Method(bootstrap(byte[][])void)",
         "Method(submit_proposal(string,address,uint64,byte[][],uint64[])uint64)",
         "Method(get_proposal_count()uint64)",
         "Method(get_threshold()uint64)",
         "Method(get_member_count()uint64)"
       ]
     },
-    "86": {
+    "91": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
+        "Method(bootstrap(byte[][])void)",
         "Method(get_member_count()uint64)",
         "Method(get_proposal_count()uint64)",
         "Method(get_threshold()uint64)",
@@ -76,6 +79,7 @@
         "tmp%4#0"
       ],
       "stack_out": [
+        "Method(bootstrap(byte[][])void)",
         "Method(submit_proposal(string,address,uint64,byte[][],uint64[])uint64)",
         "Method(get_proposal_count()uint64)",
         "Method(get_threshold()uint64)",
@@ -83,15 +87,15 @@
         "tmp%4#0"
       ]
     },
-    "89": {
-      "op": "match submit_proposal get_proposal_count get_threshold get_member_count",
+    "94": {
+      "op": "match bootstrap submit_proposal get_proposal_count get_threshold get_member_count",
       "stack_out": []
     },
-    "99": {
+    "106": {
       "op": "err"
     },
-    "100": {
-      "block": "main_create_NoOp@10",
+    "107": {
+      "block": "main_create_NoOp@11",
       "stack_in": [],
       "op": "pushbytes 0x7c843d39 // method \"create(string,uint64,byte[][])void\"",
       "defined_out": [
@@ -101,7 +105,7 @@
         "Method(create(string,uint64,byte[][])void)"
       ]
     },
-    "106": {
+    "113": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(create(string,uint64,byte[][])void)",
@@ -112,14 +116,14 @@
         "tmp%5#0"
       ]
     },
-    "109": {
+    "116": {
       "op": "match create",
       "stack_out": []
     },
-    "113": {
+    "120": {
       "op": "err"
     },
-    "114": {
+    "121": {
       "subroutine": "_puya_lib.arc4.dynamic_array_read_byte_length_element",
       "params": {
         "array#0": "bytes",
@@ -129,7 +133,7 @@
       "stack_in": [],
       "op": "proto 2 1"
     },
-    "117": {
+    "124": {
       "op": "frame_dig -2",
       "defined_out": [
         "array#0 (copy)"
@@ -138,7 +142,7 @@
         "array#0 (copy)"
       ]
     },
-    "119": {
+    "126": {
       "op": "extract 2 0",
       "defined_out": [
         "array_head_and_tail#0"
@@ -147,7 +151,7 @@
         "array_head_and_tail#0"
       ]
     },
-    "122": {
+    "129": {
       "op": "frame_dig -1",
       "defined_out": [
         "array_head_and_tail#0",
@@ -158,7 +162,7 @@
         "index#0 (copy)"
       ]
     },
-    "124": {
+    "131": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
@@ -171,7 +175,7 @@
         "2"
       ]
     },
-    "125": {
+    "132": {
       "op": "*",
       "defined_out": [
         "array_head_and_tail#0",
@@ -182,7 +186,7 @@
         "tmp%1#0"
       ]
     },
-    "126": {
+    "133": {
       "op": "dig 1",
       "defined_out": [
         "array_head_and_tail#0",
@@ -195,7 +199,7 @@
         "array_head_and_tail#0 (copy)"
       ]
     },
-    "128": {
+    "135": {
       "op": "swap",
       "stack_out": [
         "array_head_and_tail#0",
@@ -203,7 +207,7 @@
         "tmp%1#0"
       ]
     },
-    "129": {
+    "136": {
       "op": "extract_uint16",
       "defined_out": [
         "array_head_and_tail#0",
@@ -214,7 +218,7 @@
         "item_start_offset#0"
       ]
     },
-    "130": {
+    "137": {
       "op": "dup2",
       "defined_out": [
         "array_head_and_tail#0",
@@ -229,7 +233,7 @@
         "item_start_offset#0 (copy)"
       ]
     },
-    "131": {
+    "138": {
       "op": "extract_uint16",
       "defined_out": [
         "array_head_and_tail#0",
@@ -242,7 +246,7 @@
         "item_length#0"
       ]
     },
-    "132": {
+    "139": {
       "op": "intc_1 // 2",
       "stack_out": [
         "array_head_and_tail#0",
@@ -251,7 +255,7 @@
         "2"
       ]
     },
-    "133": {
+    "140": {
       "op": "+",
       "defined_out": [
         "array_head_and_tail#0",
@@ -264,7 +268,7 @@
         "tmp%4#0"
       ]
     },
-    "134": {
+    "141": {
       "op": "extract3",
       "defined_out": [
         "tmp%5#0"
@@ -273,52 +277,35 @@
         "tmp%5#0"
       ]
     },
-    "135": {
+    "142": {
       "retsub": true,
       "op": "retsub"
     },
-    "136": {
+    "143": {
       "subroutine": "pqc_dao.PQCDao.create[routing]",
       "params": {},
       "block": "create",
       "stack_in": [],
-      "op": "pushbytes \"\"",
-      "stack_out": [
-        "continue_looping%0#0"
-      ]
-    },
-    "138": {
-      "op": "dup",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0"
-      ]
-    },
-    "139": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0"
       ]
     },
-    "142": {
+    "146": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
         "tmp%0#0 (copy)"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "tmp%0#0 (copy)"
       ]
     },
-    "143": {
+    "147": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -326,14 +313,12 @@
         "tmp%0#0 (copy)"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "tmp%0#0 (copy)",
         "0"
       ]
     },
-    "144": {
+    "148": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -341,13 +326,11 @@
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "aggregate%array_length%0#0"
       ]
     },
-    "145": {
+    "149": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
@@ -355,37 +338,31 @@
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "aggregate%array_length%0#0",
         "2"
       ]
     },
-    "146": {
+    "150": {
       "op": "+",
       "defined_out": [
         "add%0#0",
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "add%0#0"
       ]
     },
-    "147": {
+    "151": {
       "op": "dig 1",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "add%0#0",
         "tmp%0#0 (copy)"
       ]
     },
-    "149": {
+    "153": {
       "op": "len",
       "defined_out": [
         "add%0#0",
@@ -393,60 +370,50 @@
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "add%0#0",
         "len%0#0"
       ]
     },
-    "150": {
+    "154": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
         "tmp%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0",
         "eq%0#0"
       ]
     },
-    "151": {
+    "155": {
       "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "tmp%0#0"
       ]
     },
-    "152": {
+    "156": {
       "op": "extract 2 0",
       "defined_out": [
         "dao_name#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0"
       ]
     },
-    "155": {
+    "159": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "dao_name#0",
         "tmp%2#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0"
       ]
     },
-    "158": {
+    "162": {
       "op": "dup",
       "defined_out": [
         "dao_name#0",
@@ -454,14 +421,12 @@
         "tmp%2#0 (copy)"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0",
         "tmp%2#0 (copy)"
       ]
     },
-    "159": {
+    "163": {
       "op": "len",
       "defined_out": [
         "dao_name#0",
@@ -469,14 +434,12 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0",
         "len%1#0"
       ]
     },
-    "160": {
+    "164": {
       "op": "intc_3 // 8",
       "defined_out": [
         "8",
@@ -485,15 +448,13 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0",
         "len%1#0",
         "8"
       ]
     },
-    "161": {
+    "165": {
       "op": "==",
       "defined_out": [
         "dao_name#0",
@@ -501,41 +462,45 @@
         "tmp%2#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0",
         "eq%1#0"
       ]
     },
-    "162": {
+    "166": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "tmp%2#0"
       ]
     },
-    "163": {
+    "167": {
       "op": "btoi",
       "defined_out": [
         "dao_name#0",
         "threshold#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0"
       ]
     },
-    "164": {
-      "op": "txna ApplicationArgs 3"
+    "168": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "dao_name#0",
+        "public_keys#0",
+        "threshold#0"
+      ],
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "public_keys#0"
+      ]
     },
-    "167": {
-      "op": "dupn 2",
+    "171": {
+      "op": "dup",
       "defined_out": [
         "dao_name#0",
         "public_keys#0",
@@ -543,29 +508,23 @@
         "threshold#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "public_keys#0",
         "public_keys#0 (copy)"
       ]
     },
-    "169": {
+    "172": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "public_keys#0",
         "public_keys#0 (copy)",
         "0"
       ]
     },
-    "170": {
+    "173": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -575,56 +534,44 @@
         "threshold#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
-        "public_keys#0",
-        "n#0"
-      ]
-    },
-    "171": {
-      "op": "dup",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "public_keys#0",
-        "n#0",
-        "n#0"
-      ]
-    },
-    "172": {
-      "op": "cover 2",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
         "public_keys#0",
         "n#0"
       ]
     },
     "174": {
-      "op": "intc_1 // 2",
+      "op": "dup",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
         "public_keys#0",
+        "n#0",
+        "n#0"
+      ]
+    },
+    "175": {
+      "op": "cover 2",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "public_keys#0",
+        "n#0"
+      ]
+    },
+    "177": {
+      "op": "intc_1 // 2",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
         "n#0",
         "public_keys#0",
         "n#0",
         "2"
       ]
     },
-    "175": {
+    "178": {
       "op": "*",
       "defined_out": [
         "dao_name#0",
@@ -634,70 +581,11 @@
         "threshold#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "public_keys#0",
         "num_bytes%0#0"
-      ]
-    },
-    "176": {
-      "op": "swap",
-      "defined_out": [
-        "dao_name#0",
-        "n#0",
-        "num_bytes%0#0",
-        "public_keys#0",
-        "threshold#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "public_keys#0"
-      ]
-    },
-    "177": {
-      "op": "dup",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "public_keys#0",
-        "public_keys#0 (copy)"
-      ]
-    },
-    "178": {
-      "op": "len",
-      "defined_out": [
-        "dao_name#0",
-        "n#0",
-        "num_bytes%0#0",
-        "public_keys#0",
-        "threshold#0",
-        "total_length%0#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "public_keys#0",
-        "total_length%0#0"
       ]
     },
     "179": {
@@ -707,45 +595,85 @@
         "n#0",
         "num_bytes%0#0",
         "public_keys#0",
+        "threshold#0"
+      ],
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "public_keys#0"
+      ]
+    },
+    "180": {
+      "op": "dup",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "public_keys#0 (copy)"
+      ]
+    },
+    "181": {
+      "op": "len",
+      "defined_out": [
+        "dao_name#0",
+        "n#0",
+        "num_bytes%0#0",
+        "public_keys#0",
         "threshold#0",
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
         "public_keys#0",
+        "total_length%0#0"
+      ]
+    },
+    "182": {
+      "op": "swap",
+      "defined_out": [
+        "dao_name#0",
+        "n#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "threshold#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "public_keys#0"
       ]
     },
-    "180": {
+    "183": {
       "op": "extract 2 0",
       "defined_out": [
         "array_data%0#0",
         "dao_name#0",
         "n#0",
         "num_bytes%0#0",
-        "public_keys#0",
         "threshold#0",
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0"
       ]
     },
-    "183": {
+    "186": {
       "op": "intc_0 // 0",
       "defined_out": [
         "array_data%0#0",
@@ -753,16 +681,12 @@
         "index%0#0",
         "n#0",
         "num_bytes%0#0",
-        "public_keys#0",
         "threshold#0",
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -770,14 +694,11 @@
         "index%0#0"
       ]
     },
-    "184": {
+    "187": {
       "block": "create_for_header@1",
       "stack_in": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -789,11 +710,8 @@
         "index%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -802,18 +720,15 @@
         "index%0#0"
       ]
     },
-    "185": {
+    "188": {
       "op": "dig 5",
       "defined_out": [
         "index%0#0",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -823,7 +738,7 @@
         "n#0"
       ]
     },
-    "187": {
+    "190": {
       "op": "<",
       "defined_out": [
         "continue_looping%0#0",
@@ -831,11 +746,8 @@
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -844,14 +756,11 @@
         "continue_looping%0#0"
       ]
     },
-    "188": {
+    "191": {
       "op": "bz create_after_for@4",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -859,20 +768,16 @@
         "index%0#0"
       ]
     },
-    "191": {
+    "194": {
       "op": "dupn 2",
       "defined_out": [
-        "continue_looping%0#0",
         "index%0#0",
         "index%0#0 (copy)",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -882,21 +787,17 @@
         "index%0#0 (copy)"
       ]
     },
-    "193": {
+    "196": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
-        "continue_looping%0#0",
         "index%0#0",
         "index%0#0 (copy)",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -907,20 +808,16 @@
         "2"
       ]
     },
-    "194": {
+    "197": {
       "op": "*",
       "defined_out": [
-        "continue_looping%0#0",
         "head_offset_bytes%0#0",
         "index%0#0",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -930,21 +827,17 @@
         "head_offset_bytes%0#0"
       ]
     },
-    "195": {
+    "198": {
       "op": "dig 3",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "head_offset_bytes%0#0",
         "index%0#0",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -955,25 +848,21 @@
         "array_data%0#0"
       ]
     },
-    "197": {
+    "200": {
       "op": "dup"
     },
-    "198": {
+    "201": {
       "op": "uncover 2",
       "defined_out": [
         "array_data%0#0",
         "array_data%0#0 (copy)",
-        "continue_looping%0#0",
         "head_offset_bytes%0#0",
         "index%0#0",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -985,22 +874,18 @@
         "head_offset_bytes%0#0"
       ]
     },
-    "200": {
+    "203": {
       "error": "invalid array encoding",
       "op": "extract_uint16 // on error: invalid array encoding",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1011,22 +896,18 @@
         "item_offset%0#0"
       ]
     },
-    "201": {
+    "204": {
       "op": "dup",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "item_offset%0#0 (copy)",
         "n#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1038,11 +919,10 @@
         "item_offset%0#0 (copy)"
       ]
     },
-    "202": {
+    "205": {
       "op": "dig 7",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "item_offset%0#0 (copy)",
@@ -1050,11 +930,8 @@
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1067,11 +944,10 @@
         "num_bytes%0#0"
       ]
     },
-    "204": {
+    "207": {
       "op": "dup",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "item_offset%0#0 (copy)",
@@ -1080,11 +956,8 @@
         "num_bytes%0#0 (copy)"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1098,14 +971,11 @@
         "num_bytes%0#0 (copy)"
       ]
     },
-    "205": {
+    "208": {
       "op": "cover 4",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1119,11 +989,10 @@
         "num_bytes%0#0 (copy)"
       ]
     },
-    "207": {
+    "210": {
       "op": "==",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "n#0",
@@ -1131,11 +1000,8 @@
         "offset_is_correct%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1148,15 +1014,12 @@
         "offset_is_correct%0#0"
       ]
     },
-    "208": {
+    "211": {
       "error": "invalid tail pointer for (len+(len+uint8[])[])",
       "op": "assert // invalid tail pointer for (len+(len+uint8[])[])",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1168,14 +1031,11 @@
         "item_offset%0#0"
       ]
     },
-    "209": {
+    "212": {
       "op": "dig 1",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1188,11 +1048,10 @@
         "array_data%0#0 (copy)"
       ]
     },
-    "211": {
+    "214": {
       "op": "len",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "item_offset%0#0",
         "n#0",
@@ -1200,11 +1059,8 @@
         "total_length%1#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1217,22 +1073,18 @@
         "total_length%1#0"
       ]
     },
-    "212": {
+    "215": {
       "op": "substring3",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "extract_to_end%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1243,23 +1095,19 @@
         "extract_to_end%0#0"
       ]
     },
-    "213": {
+    "216": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
         "array_data%0#0",
-        "continue_looping%0#0",
         "extract_to_end%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1271,23 +1119,19 @@
         "0"
       ]
     },
-    "214": {
+    "217": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
         "aggregate%array_length%2#0",
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1298,14 +1142,11 @@
         "aggregate%array_length%2#0"
       ]
     },
-    "215": {
+    "218": {
       "op": "intc_1 // 2",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1317,22 +1158,18 @@
         "2"
       ]
     },
-    "216": {
+    "219": {
       "op": "+",
       "defined_out": [
         "add%1#0",
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1343,14 +1180,11 @@
         "add%1#0"
       ]
     },
-    "217": {
+    "220": {
       "op": "+",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1360,21 +1194,17 @@
         "num_bytes%0#0"
       ]
     },
-    "218": {
+    "221": {
       "op": "bury 5",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1383,22 +1213,18 @@
         "index%0#0"
       ]
     },
-    "220": {
+    "223": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1408,14 +1234,11 @@
         "1"
       ]
     },
-    "221": {
+    "224": {
       "op": "+",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1424,21 +1247,17 @@
         "index%0#0"
       ]
     },
-    "222": {
+    "225": {
       "op": "bury 1",
       "defined_out": [
         "array_data%0#0",
-        "continue_looping%0#0",
         "index%0#0",
         "n#0",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1446,17 +1265,14 @@
         "index%0#0"
       ]
     },
-    "224": {
+    "227": {
       "op": "b create_for_header@1"
     },
-    "227": {
+    "230": {
       "block": "create_after_for@4",
       "stack_in": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1468,11 +1284,8 @@
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1481,18 +1294,15 @@
         "num_bytes%0#0"
       ]
     },
-    "229": {
+    "232": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
         "num_bytes%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1502,18 +1312,15 @@
         "2"
       ]
     },
-    "230": {
+    "233": {
       "op": "+",
       "defined_out": [
         "num_bytes%0#0",
         "num_bytes%1#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1522,7 +1329,7 @@
         "num_bytes%1#0"
       ]
     },
-    "231": {
+    "234": {
       "op": "dig 3",
       "defined_out": [
         "num_bytes%0#0",
@@ -1530,11 +1337,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1544,7 +1348,7 @@
         "total_length%0#0"
       ]
     },
-    "233": {
+    "236": {
       "op": "==",
       "defined_out": [
         "eq%2#0",
@@ -1552,11 +1356,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1565,15 +1366,12 @@
         "eq%2#0"
       ]
     },
-    "234": {
+    "237": {
       "error": "invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1581,85 +1379,73 @@
         "index%0#0"
       ]
     },
-    "235": {
-      "op": "dig 6",
-      "defined_out": [
-        "num_bytes%0#0",
-        "threshold#0",
-        "total_length%0#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "threshold#0"
-      ]
-    },
-    "237": {
-      "op": "dup",
-      "defined_out": [
-        "num_bytes%0#0",
-        "threshold#0",
-        "threshold#0 (copy)",
-        "total_length%0#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "threshold#0",
-        "threshold#0 (copy)"
-      ]
-    },
     "238": {
-      "error": "Threshold must be >= 1",
-      "op": "assert // Threshold must be >= 1",
+      "op": "dig 5",
+      "defined_out": [
+        "num_bytes%0#0",
+        "threshold#0",
+        "total_length%0#0"
+      ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
         "threshold#0"
-      ]
-    },
-    "239": {
-      "op": "dup",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "threshold#0",
-        "threshold#0 (copy)"
       ]
     },
     "240": {
+      "op": "dup",
+      "defined_out": [
+        "num_bytes%0#0",
+        "threshold#0",
+        "threshold#0 (copy)",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "threshold#0",
+        "threshold#0 (copy)"
+      ]
+    },
+    "241": {
+      "error": "Threshold must be >= 1",
+      "op": "assert // Threshold must be >= 1",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "threshold#0"
+      ]
+    },
+    "242": {
+      "op": "dup",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "threshold#0",
+        "threshold#0 (copy)"
+      ]
+    },
+    "243": {
       "op": "dig 6",
       "defined_out": [
         "n#0",
@@ -1669,11 +1455,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1684,7 +1467,7 @@
         "n#0"
       ]
     },
-    "242": {
+    "245": {
       "op": "dup",
       "defined_out": [
         "n#0",
@@ -1695,11 +1478,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1711,14 +1491,11 @@
         "n#0 (copy)"
       ]
     },
-    "243": {
+    "246": {
       "op": "cover 2",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1730,7 +1507,7 @@
         "n#0 (copy)"
       ]
     },
-    "245": {
+    "248": {
       "op": "<=",
       "defined_out": [
         "n#0",
@@ -1740,11 +1517,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1755,15 +1529,12 @@
         "tmp%2#1"
       ]
     },
-    "246": {
+    "249": {
       "error": "Threshold cannot exceed member count",
       "op": "assert // Threshold cannot exceed member count",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1773,14 +1544,11 @@
         "n#0"
       ]
     },
-    "247": {
+    "250": {
       "op": "dup",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1791,59 +1559,12 @@
         "n#0 (copy)"
       ]
     },
-    "248": {
-      "op": "intc_1 // 2",
+    "251": {
+      "error": "DAO requires at least 1 member",
+      "op": "assert // DAO requires at least 1 member",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "threshold#0",
-        "n#0",
-        "n#0 (copy)",
-        "2"
-      ]
-    },
-    "249": {
-      "op": ">=",
-      "defined_out": [
-        "n#0",
-        "num_bytes%0#0",
-        "threshold#0",
-        "tmp%3#1",
-        "total_length%0#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "threshold#0",
-        "n#0",
-        "tmp%3#1"
-      ]
-    },
-    "250": {
-      "error": "DAO requires at least 2 members",
-      "op": "assert // DAO requires at least 2 members",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1853,7 +1574,7 @@
         "n#0"
       ]
     },
-    "251": {
+    "252": {
       "op": "pushbytes \"dao_name\"",
       "defined_out": [
         "\"dao_name\"",
@@ -1863,11 +1584,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1878,8 +1596,8 @@
         "\"dao_name\""
       ]
     },
-    "261": {
-      "op": "dig 10",
+    "262": {
+      "op": "dig 9",
       "defined_out": [
         "\"dao_name\"",
         "dao_name#0",
@@ -1889,11 +1607,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1905,14 +1620,11 @@
         "dao_name#0"
       ]
     },
-    "263": {
+    "264": {
       "op": "app_global_put",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1922,7 +1634,7 @@
         "n#0"
       ]
     },
-    "264": {
+    "265": {
       "op": "bytec_0 // \"threshold\"",
       "defined_out": [
         "\"threshold\"",
@@ -1933,11 +1645,8 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1948,14 +1657,11 @@
         "\"threshold\""
       ]
     },
-    "265": {
+    "266": {
       "op": "uncover 2",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -1966,80 +1672,20 @@
         "threshold#0"
       ]
     },
-    "267": {
+    "268": {
       "op": "app_global_put",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
         "n#0"
-      ]
-    },
-    "268": {
-      "op": "bytec_3 // \"num_members\"",
-      "defined_out": [
-        "\"num_members\"",
-        "dao_name#0",
-        "n#0",
-        "num_bytes%0#0",
-        "threshold#0",
-        "total_length%0#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "n#0",
-        "\"num_members\""
       ]
     },
     "269": {
-      "op": "swap",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "\"num_members\"",
-        "n#0"
-      ]
-    },
-    "270": {
-      "op": "app_global_put",
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0"
-      ]
-    },
-    "271": {
       "op": "bytec_1 // \"proposal_count\"",
       "defined_out": [
         "\"proposal_count\"",
@@ -2050,20 +1696,18 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
+        "n#0",
         "\"proposal_count\""
       ]
     },
-    "272": {
+    "270": {
       "op": "intc_0 // 0",
       "defined_out": [
         "\"proposal_count\"",
@@ -2075,28 +1719,72 @@
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
+        "n#0",
         "\"proposal_count\"",
         "0"
       ]
     },
-    "273": {
+    "271": {
       "op": "app_global_put",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "n#0"
+      ]
+    },
+    "272": {
+      "op": "bytec_3 // \"num_members\"",
+      "defined_out": [
+        "\"num_members\"",
+        "dao_name#0",
+        "n#0",
+        "num_bytes%0#0",
+        "threshold#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "n#0",
+        "\"num_members\""
+      ]
+    },
+    "273": {
+      "op": "swap",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
+        "n#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "\"num_members\"",
+        "n#0"
+      ]
+    },
+    "274": {
+      "op": "app_global_put",
+      "stack_out": [
+        "dao_name#0",
+        "threshold#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -2104,46 +1792,32 @@
         "index%0#0"
       ]
     },
-    "274": {
-      "op": "intc_0 // 0",
+    "275": {
+      "op": "intc_2 // 1",
       "defined_out": [
+        "1",
         "dao_name#0",
-        "i#0",
         "n#0",
         "num_bytes%0#0",
         "threshold#0",
         "total_length%0#0"
       ],
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
-        "i#0"
+        "1"
       ]
     },
-    "275": {
-      "op": "bury 9",
-      "defined_out": [
-        "dao_name#0",
-        "i#0",
-        "n#0",
-        "num_bytes%0#0",
-        "threshold#0",
-        "total_length%0#0"
-      ],
+    "276": {
+      "op": "return",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
         "dao_name#0",
         "threshold#0",
-        "public_keys#0",
         "n#0",
         "num_bytes%0#0",
         "total_length%0#0",
@@ -2152,141 +1826,979 @@
       ]
     },
     "277": {
-      "block": "create_for_header@6",
-      "stack_in": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0"
-      ],
-      "op": "dig 8",
-      "defined_out": [
-        "i#0"
-      ],
+      "subroutine": "pqc_dao.PQCDao.bootstrap[routing]",
+      "params": {},
+      "block": "bootstrap",
+      "stack_in": [],
+      "op": "pushbytes \"\"",
       "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "i#0"
-      ]
-    },
-    "279": {
-      "op": "dig 5",
-      "defined_out": [
-        "i#0",
-        "n#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "i#0",
-        "n#0"
-      ]
-    },
-    "281": {
-      "op": "<",
-      "defined_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "n#0"
-      ],
-      "stack_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "dao_name#0",
-        "threshold#0",
-        "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
         "continue_looping%0#0"
       ]
     },
-    "282": {
+    "279": {
+      "op": "dup",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0"
+      ]
+    },
+    "280": {
+      "op": "txna ApplicationArgs 1"
+    },
+    "283": {
+      "op": "dupn 2",
+      "defined_out": [
+        "public_keys#0",
+        "public_keys#0 (copy)"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "public_keys#0",
+        "public_keys#0 (copy)"
+      ]
+    },
+    "285": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "public_keys#0",
+        "public_keys#0 (copy)",
+        "0"
+      ]
+    },
+    "286": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length#0",
+        "public_keys#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "public_keys#0",
+        "length#0"
+      ]
+    },
+    "287": {
       "op": "dup",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "continue_looping%0#0",
-        "continue_looping%0#0"
+        "public_keys#0",
+        "length#0",
+        "length#0"
       ]
     },
-    "283": {
-      "op": "bury 11",
+    "288": {
+      "op": "cover 2",
       "defined_out": [
-        "continue_looping%0#0",
-        "i#0",
-        "n#0"
+        "length#0",
+        "public_keys#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
-        "num_bytes%0#0",
-        "total_length%0#0",
-        "array_data%0#0",
-        "index%0#0",
-        "continue_looping%0#0"
+        "length#0",
+        "public_keys#0",
+        "length#0"
       ]
     },
-    "285": {
-      "op": "bz create_after_for@9",
+    "290": {
+      "op": "intc_1 // 2",
+      "defined_out": [
+        "2",
+        "length#0",
+        "public_keys#0"
+      ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
+        "public_keys#0",
+        "length#0",
+        "2"
+      ]
+    },
+    "291": {
+      "op": "*",
+      "defined_out": [
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "public_keys#0",
+        "num_bytes%0#0"
+      ]
+    },
+    "292": {
+      "op": "swap",
+      "defined_out": [
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0"
+      ]
+    },
+    "293": {
+      "op": "dup",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "public_keys#0 (copy)"
+      ]
+    },
+    "294": {
+      "op": "len",
+      "defined_out": [
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "total_length%0#0"
+      ]
+    },
+    "295": {
+      "op": "swap",
+      "defined_out": [
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "public_keys#0"
+      ]
+    },
+    "296": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "array_data%0#0",
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0"
+      ]
+    },
+    "299": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "array_data%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0",
+        "public_keys#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0"
       ]
     },
-    "288": {
-      "op": "dig 8",
+    "300": {
+      "block": "bootstrap_for_header@1",
+      "stack_in": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "index%0#0"
+      ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0"
+      ]
+    },
+    "301": {
+      "op": "dig 5",
+      "defined_out": [
+        "index%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "length#0"
+      ]
+    },
+    "303": {
+      "op": "<",
+      "defined_out": [
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "304": {
+      "op": "bz bootstrap_after_for@4",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ]
+    },
+    "307": {
+      "op": "dupn 2",
+      "defined_out": [
+        "continue_looping%0#0",
+        "index%0#0",
+        "index%0#0 (copy)",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "index%0#0 (copy)"
+      ]
+    },
+    "309": {
+      "op": "intc_1 // 2",
+      "defined_out": [
+        "2",
+        "continue_looping%0#0",
+        "index%0#0",
+        "index%0#0 (copy)",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "index%0#0 (copy)",
+        "2"
+      ]
+    },
+    "310": {
+      "op": "*",
+      "defined_out": [
+        "continue_looping%0#0",
+        "head_offset_bytes%0#0",
+        "index%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "head_offset_bytes%0#0"
+      ]
+    },
+    "311": {
+      "op": "dig 3",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "head_offset_bytes%0#0",
+        "index%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "head_offset_bytes%0#0",
+        "array_data%0#0"
+      ]
+    },
+    "313": {
+      "op": "dup"
+    },
+    "314": {
+      "op": "uncover 2",
+      "defined_out": [
+        "array_data%0#0",
+        "array_data%0#0 (copy)",
+        "continue_looping%0#0",
+        "head_offset_bytes%0#0",
+        "index%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "array_data%0#0",
+        "array_data%0#0 (copy)",
+        "head_offset_bytes%0#0"
+      ]
+    },
+    "316": {
+      "error": "invalid array encoding",
+      "op": "extract_uint16 // on error: invalid array encoding",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "array_data%0#0",
+        "item_offset%0#0"
+      ]
+    },
+    "317": {
+      "op": "dup",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)"
+      ]
+    },
+    "318": {
+      "op": "dig 7",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "num_bytes%0#0"
+      ]
+    },
+    "320": {
+      "op": "dup",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "length#0",
+        "num_bytes%0#0",
+        "num_bytes%0#0 (copy)"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "num_bytes%0#0 (copy)",
+        "num_bytes%0#0 (copy)"
+      ]
+    },
+    "321": {
+      "op": "cover 4",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "item_offset%0#0 (copy)",
+        "num_bytes%0#0 (copy)"
+      ]
+    },
+    "323": {
+      "op": "==",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "length#0",
+        "num_bytes%0#0",
+        "offset_is_correct%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "offset_is_correct%0#0"
+      ]
+    },
+    "324": {
+      "error": "invalid tail pointer for (len+(len+uint8[])[])",
+      "op": "assert // invalid tail pointer for (len+(len+uint8[])[])",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "array_data%0#0",
+        "item_offset%0#0"
+      ]
+    },
+    "325": {
+      "op": "dig 1",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "array_data%0#0 (copy)"
+      ]
+    },
+    "327": {
+      "op": "len",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "item_offset%0#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%1#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "array_data%0#0",
+        "item_offset%0#0",
+        "total_length%1#0"
+      ]
+    },
+    "328": {
+      "op": "substring3",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "extract_to_end%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "extract_to_end%0#0"
+      ]
+    },
+    "329": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "extract_to_end%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "extract_to_end%0#0",
+        "0"
+      ]
+    },
+    "330": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "331": {
+      "op": "intc_1 // 2",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "aggregate%array_length%1#0",
+        "2"
+      ]
+    },
+    "332": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "add%0#0"
+      ]
+    },
+    "333": {
+      "op": "+",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "num_bytes%0#0"
+      ]
+    },
+    "334": {
+      "op": "bury 5",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0"
+      ]
+    },
+    "336": {
+      "op": "intc_2 // 1",
+      "defined_out": [
+        "1",
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0",
+        "1"
+      ]
+    },
+    "337": {
+      "op": "+",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "index%0#0"
+      ]
+    },
+    "338": {
+      "op": "bury 1",
+      "defined_out": [
+        "array_data%0#0",
+        "continue_looping%0#0",
+        "index%0#0",
+        "length#0",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ]
+    },
+    "340": {
+      "op": "b bootstrap_for_header@1"
+    },
+    "343": {
+      "block": "bootstrap_after_for@4",
+      "stack_in": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ],
+      "op": "dig 3",
+      "defined_out": [
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "num_bytes%0#0"
+      ]
+    },
+    "345": {
+      "op": "intc_1 // 2",
+      "defined_out": [
+        "2",
+        "num_bytes%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "num_bytes%0#0",
+        "2"
+      ]
+    },
+    "346": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes%0#0",
+        "num_bytes%1#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "num_bytes%1#0"
+      ]
+    },
+    "347": {
+      "op": "dig 3",
+      "defined_out": [
+        "num_bytes%0#0",
+        "num_bytes%1#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "num_bytes%1#0",
+        "total_length%0#0"
+      ]
+    },
+    "349": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "num_bytes%0#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "eq%0#0"
+      ]
+    },
+    "350": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ]
+    },
+    "351": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "i#0",
+        "num_bytes%0#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2294,21 +2806,164 @@
         "i#0"
       ]
     },
-    "290": {
+    "352": {
+      "op": "bury 7",
+      "defined_out": [
+        "i#0",
+        "num_bytes%0#0",
+        "total_length%0#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ]
+    },
+    "354": {
+      "block": "bootstrap_for_header@6",
+      "stack_in": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ],
+      "op": "dig 6",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "i#0"
+      ]
+    },
+    "356": {
+      "op": "dig 5",
+      "defined_out": [
+        "i#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "i#0",
+        "length#0"
+      ]
+    },
+    "358": {
+      "op": "<",
+      "defined_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "359": {
+      "op": "dup",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "continue_looping%0#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "360": {
+      "op": "bury 9",
+      "defined_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "length#0"
+      ],
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "362": {
+      "op": "bz bootstrap_after_for@9",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0"
+      ]
+    },
+    "365": {
+      "op": "dig 6",
+      "stack_out": [
+        "continue_looping%0#0",
+        "i#0",
+        "public_keys#0",
+        "length#0",
+        "num_bytes%0#0",
+        "total_length%0#0",
+        "array_data%0#0",
+        "index%0#0",
+        "i#0"
+      ]
+    },
+    "367": {
       "op": "dup",
       "defined_out": [
         "continue_looping%0#0",
         "i#0",
         "i#0 (copy)",
-        "n#0"
+        "length#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2317,87 +2972,79 @@
         "i#0 (copy)"
       ]
     },
-    "291": {
+    "368": {
       "op": "itob",
       "defined_out": [
         "continue_looping%0#0",
         "i#0",
-        "n#0",
-        "tmp%4#1"
+        "length#0",
+        "tmp%1#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
         "i#0",
-        "tmp%4#1"
+        "tmp%1#0"
       ]
     },
-    "292": {
+    "369": {
       "op": "bytec 4 // 0x706b5f",
       "defined_out": [
         "0x706b5f",
         "continue_looping%0#0",
         "i#0",
-        "n#0",
-        "tmp%4#1"
+        "length#0",
+        "tmp%1#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
         "i#0",
-        "tmp%4#1",
+        "tmp%1#0",
         "0x706b5f"
       ]
     },
-    "294": {
+    "371": {
       "op": "swap",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0",
         "i#0",
         "0x706b5f",
-        "tmp%4#1"
+        "tmp%1#0"
       ]
     },
-    "295": {
+    "372": {
       "op": "concat",
       "defined_out": [
         "box_key#0",
         "continue_looping%0#0",
         "i#0",
-        "n#0"
+        "length#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2406,15 +3053,13 @@
         "box_key#0"
       ]
     },
-    "296": {
-      "op": "dig 11",
+    "373": {
+      "op": "dig 9",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2424,16 +3069,14 @@
         "continue_looping%0#0"
       ]
     },
-    "298": {
+    "375": {
       "error": "index out of bounds",
       "op": "assert // index out of bounds",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2442,22 +3085,20 @@
         "box_key#0"
       ]
     },
-    "299": {
+    "376": {
       "op": "dig 7",
       "defined_out": [
         "box_key#0",
         "continue_looping%0#0",
         "i#0",
-        "n#0",
+        "length#0",
         "public_keys#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2467,15 +3108,13 @@
         "public_keys#0"
       ]
     },
-    "301": {
+    "378": {
       "op": "dig 2",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2486,7 +3125,7 @@
         "i#0 (copy)"
       ]
     },
-    "303": {
+    "380": {
       "callsub": "_puya_lib.arc4.dynamic_array_read_byte_length_element",
       "op": "callsub dynamic_array_read_byte_length_element",
       "defined_out": [
@@ -2494,16 +3133,14 @@
         "box_key#0",
         "continue_looping%0#0",
         "i#0",
-        "n#0",
+        "length#0",
         "public_keys#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2513,15 +3150,13 @@
         "aggregate%item%0#0"
       ]
     },
-    "306": {
+    "383": {
       "op": "box_put",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2529,22 +3164,20 @@
         "i#0"
       ]
     },
-    "307": {
+    "384": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
         "continue_looping%0#0",
         "i#0",
-        "n#0",
+        "length#0",
         "public_keys#0"
       ],
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2553,15 +3186,13 @@
         "1"
       ]
     },
-    "308": {
+    "385": {
       "op": "+",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2569,33 +3200,29 @@
         "i#0"
       ]
     },
-    "309": {
-      "op": "bury 9",
+    "386": {
+      "op": "bury 7",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0"
       ]
     },
-    "311": {
-      "op": "b create_for_header@6"
+    "388": {
+      "op": "b bootstrap_for_header@6"
     },
-    "314": {
-      "block": "create_after_for@9",
+    "391": {
+      "block": "bootstrap_after_for@9",
       "stack_in": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2608,10 +3235,8 @@
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
@@ -2619,22 +3244,20 @@
         "1"
       ]
     },
-    "315": {
+    "392": {
       "op": "return",
       "stack_out": [
         "continue_looping%0#0",
         "i#0",
-        "dao_name#0",
-        "threshold#0",
         "public_keys#0",
-        "n#0",
+        "length#0",
         "num_bytes%0#0",
         "total_length%0#0",
         "array_data%0#0",
         "index%0#0"
       ]
     },
-    "316": {
+    "393": {
       "subroutine": "pqc_dao.PQCDao.submit_proposal[routing]",
       "params": {},
       "block": "submit_proposal",
@@ -2644,7 +3267,7 @@
         "desc_hash#0"
       ]
     },
-    "317": {
+    "394": {
       "op": "dupn 4",
       "stack_out": [
         "desc_hash#0",
@@ -2654,7 +3277,7 @@
         "tmp%9#0"
       ]
     },
-    "319": {
+    "396": {
       "op": "pushbytes \"\"",
       "stack_out": [
         "desc_hash#0",
@@ -2665,7 +3288,7 @@
         "continue_looping%0#0"
       ]
     },
-    "321": {
+    "398": {
       "op": "dupn 2",
       "stack_out": [
         "desc_hash#0",
@@ -2678,7 +3301,7 @@
         "verified#0"
       ]
     },
-    "323": {
+    "400": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "tmp%0#0"
@@ -2695,7 +3318,7 @@
         "tmp%0#0"
       ]
     },
-    "326": {
+    "403": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -2714,7 +3337,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "327": {
+    "404": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -2735,7 +3358,7 @@
         "0"
       ]
     },
-    "328": {
+    "405": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -2755,7 +3378,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "329": {
+    "406": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
@@ -2776,7 +3399,7 @@
         "2"
       ]
     },
-    "330": {
+    "407": {
       "op": "+",
       "defined_out": [
         "add%0#0",
@@ -2795,7 +3418,7 @@
         "add%0#0"
       ]
     },
-    "331": {
+    "408": {
       "op": "dig 1",
       "stack_out": [
         "desc_hash#0",
@@ -2811,7 +3434,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "333": {
+    "410": {
       "op": "len",
       "defined_out": [
         "add%0#0",
@@ -2832,7 +3455,7 @@
         "len%0#0"
       ]
     },
-    "334": {
+    "411": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -2851,7 +3474,7 @@
         "eq%0#0"
       ]
     },
-    "335": {
+    "412": {
       "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
       "stack_out": [
@@ -2866,7 +3489,7 @@
         "tmp%0#0"
       ]
     },
-    "336": {
+    "413": {
       "op": "extract 2 0",
       "defined_out": [
         "description#0"
@@ -2883,10 +3506,10 @@
         "description#0"
       ]
     },
-    "339": {
+    "416": {
       "op": "txna ApplicationArgs 2"
     },
-    "342": {
+    "419": {
       "op": "dup",
       "defined_out": [
         "description#0",
@@ -2906,7 +3529,7 @@
         "recipient#0"
       ]
     },
-    "343": {
+    "420": {
       "op": "len",
       "defined_out": [
         "description#0",
@@ -2927,7 +3550,7 @@
         "len%1#0"
       ]
     },
-    "344": {
+    "421": {
       "op": "pushint 32",
       "defined_out": [
         "32",
@@ -2950,7 +3573,7 @@
         "32"
       ]
     },
-    "346": {
+    "423": {
       "op": "==",
       "defined_out": [
         "description#0",
@@ -2971,7 +3594,7 @@
         "eq%1#0"
       ]
     },
-    "347": {
+    "424": {
       "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "stack_out": [
@@ -2987,7 +3610,7 @@
         "recipient#0"
       ]
     },
-    "348": {
+    "425": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
         "description#0",
@@ -3008,7 +3631,7 @@
         "tmp%3#0"
       ]
     },
-    "351": {
+    "428": {
       "op": "dup",
       "defined_out": [
         "description#0",
@@ -3031,7 +3654,7 @@
         "tmp%3#0 (copy)"
       ]
     },
-    "352": {
+    "429": {
       "op": "len",
       "defined_out": [
         "description#0",
@@ -3054,7 +3677,7 @@
         "len%2#0"
       ]
     },
-    "353": {
+    "430": {
       "op": "intc_3 // 8",
       "defined_out": [
         "8",
@@ -3079,7 +3702,7 @@
         "8"
       ]
     },
-    "354": {
+    "431": {
       "op": "==",
       "defined_out": [
         "description#0",
@@ -3102,7 +3725,7 @@
         "eq%2#0"
       ]
     },
-    "355": {
+    "432": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
@@ -3119,7 +3742,7 @@
         "tmp%3#0"
       ]
     },
-    "356": {
+    "433": {
       "op": "btoi",
       "defined_out": [
         "amount#0",
@@ -3140,10 +3763,10 @@
         "amount#0"
       ]
     },
-    "357": {
+    "434": {
       "op": "txna ApplicationArgs 4"
     },
-    "360": {
+    "437": {
       "op": "dupn 2",
       "defined_out": [
         "amount#0",
@@ -3169,7 +3792,7 @@
         "signatures#0 (copy)"
       ]
     },
-    "362": {
+    "439": {
       "op": "intc_0 // 0",
       "stack_out": [
         "desc_hash#0",
@@ -3189,7 +3812,7 @@
         "0"
       ]
     },
-    "363": {
+    "440": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -3216,7 +3839,7 @@
         "length#0"
       ]
     },
-    "364": {
+    "441": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -3236,7 +3859,7 @@
         "length#0"
       ]
     },
-    "365": {
+    "442": {
       "op": "cover 2",
       "defined_out": [
         "amount#0",
@@ -3263,7 +3886,7 @@
         "length#0"
       ]
     },
-    "367": {
+    "444": {
       "op": "intc_1 // 2",
       "stack_out": [
         "desc_hash#0",
@@ -3284,7 +3907,7 @@
         "2"
       ]
     },
-    "368": {
+    "445": {
       "op": "*",
       "defined_out": [
         "amount#0",
@@ -3312,7 +3935,7 @@
         "num_bytes%0#0"
       ]
     },
-    "369": {
+    "446": {
       "op": "swap",
       "defined_out": [
         "amount#0",
@@ -3340,7 +3963,7 @@
         "signatures#0"
       ]
     },
-    "370": {
+    "447": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -3361,7 +3984,7 @@
         "signatures#0 (copy)"
       ]
     },
-    "371": {
+    "448": {
       "op": "len",
       "defined_out": [
         "amount#0",
@@ -3391,7 +4014,7 @@
         "total_length%0#0"
       ]
     },
-    "372": {
+    "449": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -3412,7 +4035,7 @@
         "signatures#0"
       ]
     },
-    "373": {
+    "450": {
       "op": "extract 2 0",
       "defined_out": [
         "amount#0",
@@ -3443,7 +4066,7 @@
         "array_data%0#0"
       ]
     },
-    "376": {
+    "453": {
       "op": "intc_0 // 0",
       "defined_out": [
         "amount#0",
@@ -3476,7 +4099,7 @@
         "index%0#0"
       ]
     },
-    "377": {
+    "454": {
       "block": "submit_proposal_for_header@1",
       "stack_in": [
         "desc_hash#0",
@@ -3522,7 +4145,7 @@
         "index%0#0"
       ]
     },
-    "378": {
+    "455": {
       "op": "dig 5",
       "defined_out": [
         "index%0#0",
@@ -3550,7 +4173,7 @@
         "length#0"
       ]
     },
-    "380": {
+    "457": {
       "op": "<",
       "defined_out": [
         "continue_looping%0#0",
@@ -3578,7 +4201,7 @@
         "continue_looping%0#0"
       ]
     },
-    "381": {
+    "458": {
       "op": "bz submit_proposal_after_for@4",
       "stack_out": [
         "desc_hash#0",
@@ -3600,7 +4223,7 @@
         "index%0#0"
       ]
     },
-    "384": {
+    "461": {
       "op": "dupn 2",
       "defined_out": [
         "continue_looping%0#0",
@@ -3630,7 +4253,7 @@
         "index%0#0 (copy)"
       ]
     },
-    "386": {
+    "463": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
@@ -3662,7 +4285,7 @@
         "2"
       ]
     },
-    "387": {
+    "464": {
       "op": "*",
       "defined_out": [
         "continue_looping%0#0",
@@ -3692,7 +4315,7 @@
         "head_offset_bytes%0#0"
       ]
     },
-    "388": {
+    "465": {
       "op": "dig 3",
       "defined_out": [
         "array_data%0#0",
@@ -3724,10 +4347,10 @@
         "array_data%0#0"
       ]
     },
-    "390": {
+    "467": {
       "op": "dup"
     },
-    "391": {
+    "468": {
       "op": "uncover 2",
       "defined_out": [
         "array_data%0#0",
@@ -3761,7 +4384,7 @@
         "head_offset_bytes%0#0"
       ]
     },
-    "393": {
+    "470": {
       "error": "invalid array encoding",
       "op": "extract_uint16 // on error: invalid array encoding",
       "defined_out": [
@@ -3794,7 +4417,7 @@
         "item_offset%0#0"
       ]
     },
-    "394": {
+    "471": {
       "op": "dup",
       "defined_out": [
         "array_data%0#0",
@@ -3828,7 +4451,7 @@
         "item_offset%0#0 (copy)"
       ]
     },
-    "395": {
+    "472": {
       "op": "dig 7",
       "defined_out": [
         "array_data%0#0",
@@ -3864,7 +4487,7 @@
         "num_bytes%0#0"
       ]
     },
-    "397": {
+    "474": {
       "op": "dup",
       "defined_out": [
         "array_data%0#0",
@@ -3902,7 +4525,7 @@
         "num_bytes%0#0 (copy)"
       ]
     },
-    "398": {
+    "475": {
       "op": "cover 4",
       "stack_out": [
         "desc_hash#0",
@@ -3930,7 +4553,7 @@
         "num_bytes%0#0 (copy)"
       ]
     },
-    "400": {
+    "477": {
       "op": "==",
       "defined_out": [
         "array_data%0#0",
@@ -3966,7 +4589,7 @@
         "offset_is_correct%0#0"
       ]
     },
-    "401": {
+    "478": {
       "error": "invalid tail pointer for (len+(len+uint8[])[])",
       "op": "assert // invalid tail pointer for (len+(len+uint8[])[])",
       "stack_out": [
@@ -3993,7 +4616,7 @@
         "item_offset%0#0"
       ]
     },
-    "402": {
+    "479": {
       "op": "dig 1",
       "stack_out": [
         "desc_hash#0",
@@ -4020,7 +4643,7 @@
         "array_data%0#0 (copy)"
       ]
     },
-    "404": {
+    "481": {
       "op": "len",
       "defined_out": [
         "array_data%0#0",
@@ -4056,7 +4679,7 @@
         "total_length%1#0"
       ]
     },
-    "405": {
+    "482": {
       "op": "substring3",
       "defined_out": [
         "array_data%0#0",
@@ -4089,7 +4712,7 @@
         "extract_to_end%0#0"
       ]
     },
-    "406": {
+    "483": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -4124,7 +4747,7 @@
         "0"
       ]
     },
-    "407": {
+    "484": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -4158,7 +4781,7 @@
         "aggregate%array_length%2#0"
       ]
     },
-    "408": {
+    "485": {
       "op": "intc_1 // 2",
       "stack_out": [
         "desc_hash#0",
@@ -4184,7 +4807,7 @@
         "2"
       ]
     },
-    "409": {
+    "486": {
       "op": "+",
       "defined_out": [
         "add%1#0",
@@ -4217,7 +4840,7 @@
         "add%1#0"
       ]
     },
-    "410": {
+    "487": {
       "op": "+",
       "stack_out": [
         "desc_hash#0",
@@ -4241,7 +4864,7 @@
         "num_bytes%0#0"
       ]
     },
-    "411": {
+    "488": {
       "op": "bury 5",
       "defined_out": [
         "array_data%0#0",
@@ -4271,7 +4894,7 @@
         "index%0#0"
       ]
     },
-    "413": {
+    "490": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -4303,7 +4926,7 @@
         "1"
       ]
     },
-    "414": {
+    "491": {
       "op": "+",
       "stack_out": [
         "desc_hash#0",
@@ -4326,7 +4949,7 @@
         "index%0#0"
       ]
     },
-    "415": {
+    "492": {
       "op": "bury 1",
       "defined_out": [
         "array_data%0#0",
@@ -4355,10 +4978,10 @@
         "index%0#0"
       ]
     },
-    "417": {
+    "494": {
       "op": "b submit_proposal_for_header@1"
     },
-    "420": {
+    "497": {
       "block": "submit_proposal_after_for@4",
       "stack_in": [
         "desc_hash#0",
@@ -4404,7 +5027,7 @@
         "num_bytes%0#0"
       ]
     },
-    "422": {
+    "499": {
       "op": "intc_1 // 2",
       "defined_out": [
         "2",
@@ -4432,7 +5055,7 @@
         "2"
       ]
     },
-    "423": {
+    "500": {
       "op": "+",
       "defined_out": [
         "num_bytes%0#0",
@@ -4459,7 +5082,7 @@
         "num_bytes%1#0"
       ]
     },
-    "424": {
+    "501": {
       "op": "dig 3",
       "defined_out": [
         "num_bytes%0#0",
@@ -4488,7 +5111,7 @@
         "total_length%0#0"
       ]
     },
-    "426": {
+    "503": {
       "op": "==",
       "defined_out": [
         "eq%3#0",
@@ -4516,7 +5139,7 @@
         "eq%3#0"
       ]
     },
-    "427": {
+    "504": {
       "error": "invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>",
       "stack_out": [
@@ -4539,10 +5162,10 @@
         "index%0#0"
       ]
     },
-    "428": {
+    "505": {
       "op": "txna ApplicationArgs 5"
     },
-    "431": {
+    "508": {
       "op": "dup",
       "defined_out": [
         "num_bytes%0#0",
@@ -4571,7 +5194,7 @@
         "signer_indices#0"
       ]
     },
-    "432": {
+    "509": {
       "op": "bury 16",
       "defined_out": [
         "num_bytes%0#0",
@@ -4599,7 +5222,7 @@
         "signer_indices#0"
       ]
     },
-    "434": {
+    "511": {
       "op": "dup",
       "defined_out": [
         "num_bytes%0#0",
@@ -4629,7 +5252,7 @@
         "signer_indices#0 (copy)"
       ]
     },
-    "435": {
+    "512": {
       "op": "intc_0 // 0",
       "stack_out": [
         "desc_hash#0",
@@ -4654,7 +5277,7 @@
         "0"
       ]
     },
-    "436": {
+    "513": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -4685,7 +5308,7 @@
         "aggregate%array_length%3#0"
       ]
     },
-    "437": {
+    "514": {
       "op": "dup",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -4717,7 +5340,7 @@
         "aggregate%array_length%3#0 (copy)"
       ]
     },
-    "438": {
+    "515": {
       "op": "intc_3 // 8",
       "defined_out": [
         "8",
@@ -4751,7 +5374,7 @@
         "8"
       ]
     },
-    "439": {
+    "516": {
       "op": "*",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -4783,7 +5406,7 @@
         "mul%2#0"
       ]
     },
-    "440": {
+    "517": {
       "op": "intc_1 // 2",
       "stack_out": [
         "desc_hash#0",
@@ -4809,7 +5432,7 @@
         "2"
       ]
     },
-    "441": {
+    "518": {
       "op": "+",
       "defined_out": [
         "add%2#0",
@@ -4841,7 +5464,7 @@
         "add%2#0"
       ]
     },
-    "442": {
+    "519": {
       "op": "uncover 2",
       "stack_out": [
         "desc_hash#0",
@@ -4866,7 +5489,7 @@
         "signer_indices#0"
       ]
     },
-    "444": {
+    "521": {
       "op": "len",
       "defined_out": [
         "add%2#0",
@@ -4899,7 +5522,7 @@
         "len%4#0"
       ]
     },
-    "445": {
+    "522": {
       "op": "==",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -4930,7 +5553,7 @@
         "eq%4#0"
       ]
     },
-    "446": {
+    "523": {
       "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
       "stack_out": [
@@ -4954,7 +5577,7 @@
         "aggregate%array_length%3#0"
       ]
     },
-    "447": {
+    "524": {
       "op": "intc_0 // 0",
       "stack_out": [
         "desc_hash#0",
@@ -4978,7 +5601,7 @@
         "0"
       ]
     },
-    "448": {
+    "525": {
       "op": "bytec_1 // \"proposal_count\"",
       "defined_out": [
         "\"proposal_count\"",
@@ -5011,7 +5634,7 @@
         "\"proposal_count\""
       ]
     },
-    "449": {
+    "526": {
       "op": "app_global_get_ex",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5044,7 +5667,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "450": {
+    "527": {
       "error": "check self.proposal_count exists",
       "op": "assert // check self.proposal_count exists",
       "stack_out": [
@@ -5069,7 +5692,7 @@
         "proposal_id#0"
       ]
     },
-    "451": {
+    "528": {
       "op": "dup",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5102,7 +5725,7 @@
         "proposal_id#0 (copy)"
       ]
     },
-    "452": {
+    "529": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -5137,7 +5760,7 @@
         "1"
       ]
     },
-    "453": {
+    "530": {
       "op": "+",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5170,7 +5793,7 @@
         "tmp%0#1"
       ]
     },
-    "454": {
+    "531": {
       "op": "bytec_1 // \"proposal_count\"",
       "stack_out": [
         "desc_hash#0",
@@ -5196,7 +5819,7 @@
         "\"proposal_count\""
       ]
     },
-    "455": {
+    "532": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -5222,7 +5845,7 @@
         "tmp%0#1"
       ]
     },
-    "456": {
+    "533": {
       "op": "app_global_put",
       "stack_out": [
         "desc_hash#0",
@@ -5246,7 +5869,7 @@
         "proposal_id#0"
       ]
     },
-    "457": {
+    "534": {
       "op": "intc_0 // 0",
       "stack_out": [
         "desc_hash#0",
@@ -5271,7 +5894,7 @@
         "0"
       ]
     },
-    "458": {
+    "535": {
       "op": "bytec_0 // \"threshold\"",
       "defined_out": [
         "\"threshold\"",
@@ -5306,7 +5929,7 @@
         "\"threshold\""
       ]
     },
-    "459": {
+    "536": {
       "op": "app_global_get_ex",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5341,7 +5964,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "460": {
+    "537": {
       "error": "check self.threshold exists",
       "op": "assert // check self.threshold exists",
       "stack_out": [
@@ -5367,7 +5990,7 @@
         "maybe_value%1#0"
       ]
     },
-    "461": {
+    "538": {
       "op": "dig 7",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5402,10 +6025,10 @@
         "length#0"
       ]
     },
-    "463": {
+    "540": {
       "op": "dup"
     },
-    "464": {
+    "541": {
       "op": "uncover 2",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5442,7 +6065,7 @@
         "maybe_value%1#0"
       ]
     },
-    "466": {
+    "543": {
       "op": ">=",
       "defined_out": [
         "aggregate%array_length%3#0",
@@ -5477,7 +6100,7 @@
         "tmp%2#1"
       ]
     },
-    "467": {
+    "544": {
       "error": "Insufficient signatures",
       "op": "assert // Insufficient signatures",
       "stack_out": [
@@ -5503,7 +6126,7 @@
         "length#0"
       ]
     },
-    "468": {
+    "545": {
       "op": "uncover 2",
       "stack_out": [
         "desc_hash#0",
@@ -5528,7 +6151,7 @@
         "aggregate%array_length%3#0"
       ]
     },
-    "470": {
+    "547": {
       "op": "==",
       "defined_out": [
         "length#0",
@@ -5560,7 +6183,7 @@
         "tmp%5#1"
       ]
     },
-    "471": {
+    "548": {
       "error": "Sig/index count mismatch",
       "op": "assert // Sig/index count mismatch",
       "stack_out": [
@@ -5584,7 +6207,7 @@
         "proposal_id#0"
       ]
     },
-    "472": {
+    "549": {
       "op": "dig 9",
       "defined_out": [
         "description#0",
@@ -5616,7 +6239,7 @@
         "description#0"
       ]
     },
-    "474": {
+    "551": {
       "op": "sha256",
       "defined_out": [
         "desc_hash#0",
@@ -5649,7 +6272,7 @@
         "desc_hash#0"
       ]
     },
-    "475": {
+    "552": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -5674,7 +6297,7 @@
         "desc_hash#0"
       ]
     },
-    "476": {
+    "553": {
       "op": "bury 19",
       "defined_out": [
         "desc_hash#0",
@@ -5707,7 +6330,7 @@
         "desc_hash#0"
       ]
     },
-    "478": {
+    "555": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -5731,7 +6354,7 @@
         "proposal_id#0"
       ]
     },
-    "479": {
+    "556": {
       "op": "itob",
       "defined_out": [
         "desc_hash#0",
@@ -5764,7 +6387,7 @@
         "tmp%7#1"
       ]
     },
-    "480": {
+    "557": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -5789,7 +6412,7 @@
         "tmp%7#1"
       ]
     },
-    "481": {
+    "558": {
       "op": "bury 16",
       "defined_out": [
         "desc_hash#0",
@@ -5822,7 +6445,7 @@
         "tmp%7#1"
       ]
     },
-    "483": {
+    "560": {
       "op": "dig 9",
       "defined_out": [
         "desc_hash#0",
@@ -5857,7 +6480,7 @@
         "recipient#0"
       ]
     },
-    "485": {
+    "562": {
       "op": "concat",
       "defined_out": [
         "desc_hash#0",
@@ -5892,7 +6515,7 @@
         "tmp%8#1"
       ]
     },
-    "486": {
+    "563": {
       "op": "dig 8",
       "defined_out": [
         "amount#0",
@@ -5929,7 +6552,7 @@
         "amount#0"
       ]
     },
-    "488": {
+    "565": {
       "op": "itob",
       "defined_out": [
         "amount#0",
@@ -5967,7 +6590,7 @@
         "tmp%9#0"
       ]
     },
-    "489": {
+    "566": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -5993,7 +6616,7 @@
         "tmp%9#0"
       ]
     },
-    "490": {
+    "567": {
       "op": "bury 16",
       "defined_out": [
         "amount#0",
@@ -6031,7 +6654,7 @@
         "tmp%9#0"
       ]
     },
-    "492": {
+    "569": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -6068,7 +6691,7 @@
         "tmp%10#0"
       ]
     },
-    "493": {
+    "570": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -6092,7 +6715,7 @@
         "desc_hash#0"
       ]
     },
-    "494": {
+    "571": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -6128,7 +6751,7 @@
         "message#0"
       ]
     },
-    "495": {
+    "572": {
       "op": "bury 16",
       "stack_out": [
         "desc_hash#0",
@@ -6150,7 +6773,7 @@
         "index%0#0"
       ]
     },
-    "497": {
+    "574": {
       "op": "intc_0 // 0",
       "defined_out": [
         "amount#0",
@@ -6187,7 +6810,7 @@
         "verified#0"
       ]
     },
-    "498": {
+    "575": {
       "op": "bury 10",
       "defined_out": [
         "amount#0",
@@ -6223,7 +6846,7 @@
         "index%0#0"
       ]
     },
-    "500": {
+    "577": {
       "op": "intc_0 // 0",
       "defined_out": [
         "amount#0",
@@ -6261,7 +6884,7 @@
         "i#0"
       ]
     },
-    "501": {
+    "578": {
       "op": "bury 11",
       "stack_out": [
         "desc_hash#0",
@@ -6283,7 +6906,7 @@
         "index%0#0"
       ]
     },
-    "503": {
+    "580": {
       "block": "submit_proposal_for_header@6",
       "stack_in": [
         "desc_hash#0",
@@ -6329,7 +6952,7 @@
         "i#0"
       ]
     },
-    "505": {
+    "582": {
       "op": "dig 5",
       "defined_out": [
         "i#0",
@@ -6357,7 +6980,7 @@
         "length#0"
       ]
     },
-    "507": {
+    "584": {
       "op": "<",
       "defined_out": [
         "continue_looping%0#0",
@@ -6385,7 +7008,7 @@
         "continue_looping%0#0"
       ]
     },
-    "508": {
+    "585": {
       "op": "dup",
       "stack_out": [
         "desc_hash#0",
@@ -6409,7 +7032,7 @@
         "continue_looping%0#0"
       ]
     },
-    "509": {
+    "586": {
       "op": "bury 13",
       "defined_out": [
         "continue_looping%0#0",
@@ -6437,7 +7060,7 @@
         "continue_looping%0#0"
       ]
     },
-    "511": {
+    "588": {
       "op": "bz submit_proposal_after_for@11",
       "stack_out": [
         "desc_hash#0",
@@ -6459,7 +7082,7 @@
         "index%0#0"
       ]
     },
-    "514": {
+    "591": {
       "op": "dig 14",
       "defined_out": [
         "continue_looping%0#0",
@@ -6488,7 +7111,7 @@
         "signer_indices#0"
       ]
     },
-    "516": {
+    "593": {
       "op": "extract 2 0",
       "defined_out": [
         "aggregate%array_trimmed%0#0",
@@ -6518,7 +7141,7 @@
         "aggregate%array_trimmed%0#0"
       ]
     },
-    "519": {
+    "596": {
       "op": "dig 11",
       "stack_out": [
         "desc_hash#0",
@@ -6542,7 +7165,7 @@
         "i#0"
       ]
     },
-    "521": {
+    "598": {
       "op": "dup",
       "defined_out": [
         "aggregate%array_trimmed%0#0",
@@ -6575,7 +7198,7 @@
         "i#0 (copy)"
       ]
     },
-    "522": {
+    "599": {
       "op": "cover 2",
       "stack_out": [
         "desc_hash#0",
@@ -6600,7 +7223,7 @@
         "i#0 (copy)"
       ]
     },
-    "524": {
+    "601": {
       "op": "intc_3 // 8",
       "defined_out": [
         "8",
@@ -6635,7 +7258,7 @@
         "8"
       ]
     },
-    "525": {
+    "602": {
       "op": "*",
       "defined_out": [
         "aggregate%array_trimmed%0#0",
@@ -6668,7 +7291,7 @@
         "aggregate%bytes_offset%0#0"
       ]
     },
-    "526": {
+    "603": {
       "op": "extract_uint64",
       "defined_out": [
         "continue_looping%0#0",
@@ -6699,7 +7322,7 @@
         "idx#0"
       ]
     },
-    "527": {
+    "604": {
       "op": "intc_0 // 0",
       "stack_out": [
         "desc_hash#0",
@@ -6724,7 +7347,7 @@
         "0"
       ]
     },
-    "528": {
+    "605": {
       "op": "bytec_3 // \"num_members\"",
       "defined_out": [
         "\"num_members\"",
@@ -6759,7 +7382,7 @@
         "\"num_members\""
       ]
     },
-    "529": {
+    "606": {
       "op": "app_global_get_ex",
       "defined_out": [
         "continue_looping%0#0",
@@ -6794,7 +7417,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "530": {
+    "607": {
       "error": "check self.num_members exists",
       "op": "assert // check self.num_members exists",
       "stack_out": [
@@ -6820,7 +7443,7 @@
         "maybe_value%2#0"
       ]
     },
-    "531": {
+    "608": {
       "op": "dig 1",
       "defined_out": [
         "continue_looping%0#0",
@@ -6855,7 +7478,7 @@
         "idx#0 (copy)"
       ]
     },
-    "533": {
+    "610": {
       "op": ">",
       "defined_out": [
         "continue_looping%0#0",
@@ -6888,7 +7511,7 @@
         "tmp%14#0"
       ]
     },
-    "534": {
+    "611": {
       "error": "Member index out of range",
       "op": "assert // Member index out of range",
       "stack_out": [
@@ -6913,7 +7536,7 @@
         "idx#0"
       ]
     },
-    "535": {
+    "612": {
       "op": "itob",
       "defined_out": [
         "continue_looping%0#0",
@@ -6944,7 +7567,7 @@
         "tmp%15#0"
       ]
     },
-    "536": {
+    "613": {
       "op": "bytec 4 // 0x706b5f",
       "defined_out": [
         "0x706b5f",
@@ -6977,7 +7600,7 @@
         "0x706b5f"
       ]
     },
-    "538": {
+    "615": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -7002,7 +7625,7 @@
         "tmp%15#0"
       ]
     },
-    "539": {
+    "616": {
       "op": "concat",
       "defined_out": [
         "box_key#0",
@@ -7033,7 +7656,7 @@
         "box_key#0"
       ]
     },
-    "540": {
+    "617": {
       "op": "box_get",
       "defined_out": [
         "continue_looping%0#0",
@@ -7066,7 +7689,7 @@
         "exists#0"
       ]
     },
-    "541": {
+    "618": {
       "error": "Public key not found",
       "op": "assert // Public key not found",
       "stack_out": [
@@ -7091,7 +7714,7 @@
         "pubkey#0"
       ]
     },
-    "542": {
+    "619": {
       "op": "dig 13",
       "stack_out": [
         "desc_hash#0",
@@ -7116,7 +7739,7 @@
         "continue_looping%0#0"
       ]
     },
-    "544": {
+    "621": {
       "error": "index out of bounds",
       "op": "assert // index out of bounds",
       "stack_out": [
@@ -7141,7 +7764,7 @@
         "pubkey#0"
       ]
     },
-    "545": {
+    "622": {
       "op": "dig 7",
       "defined_out": [
         "continue_looping%0#0",
@@ -7174,7 +7797,7 @@
         "signatures#0"
       ]
     },
-    "547": {
+    "624": {
       "op": "uncover 2",
       "stack_out": [
         "desc_hash#0",
@@ -7199,7 +7822,7 @@
         "i#0"
       ]
     },
-    "549": {
+    "626": {
       "callsub": "_puya_lib.arc4.dynamic_array_read_byte_length_element",
       "op": "callsub dynamic_array_read_byte_length_element",
       "defined_out": [
@@ -7233,7 +7856,7 @@
         "aggregate%item%0#0"
       ]
     },
-    "552": {
+    "629": {
       "op": "dig 17",
       "defined_out": [
         "aggregate%item%0#0",
@@ -7268,7 +7891,7 @@
         "message#0"
       ]
     },
-    "554": {
+    "631": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -7293,7 +7916,7 @@
         "aggregate%item%0#0"
       ]
     },
-    "555": {
+    "632": {
       "op": "uncover 2",
       "stack_out": [
         "desc_hash#0",
@@ -7318,7 +7941,7 @@
         "pubkey#0"
       ]
     },
-    "557": {
+    "634": {
       "op": "falcon_verify",
       "defined_out": [
         "continue_looping%0#0",
@@ -7350,7 +7973,7 @@
         "tmp%19#0"
       ]
     },
-    "558": {
+    "635": {
       "op": "bz submit_proposal_after_if_else@9",
       "stack_out": [
         "desc_hash#0",
@@ -7372,7 +7995,7 @@
         "index%0#0"
       ]
     },
-    "561": {
+    "638": {
       "op": "dig 9",
       "defined_out": [
         "continue_looping%0#0",
@@ -7404,7 +8027,7 @@
         "verified#0"
       ]
     },
-    "563": {
+    "640": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -7438,7 +8061,7 @@
         "1"
       ]
     },
-    "564": {
+    "641": {
       "op": "+",
       "stack_out": [
         "desc_hash#0",
@@ -7461,7 +8084,7 @@
         "verified#0"
       ]
     },
-    "565": {
+    "642": {
       "op": "bury 10",
       "defined_out": [
         "continue_looping%0#0",
@@ -7492,7 +8115,7 @@
         "index%0#0"
       ]
     },
-    "567": {
+    "644": {
       "block": "submit_proposal_after_if_else@9",
       "stack_in": [
         "desc_hash#0",
@@ -7538,7 +8161,7 @@
         "i#0"
       ]
     },
-    "569": {
+    "646": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -7566,7 +8189,7 @@
         "1"
       ]
     },
-    "570": {
+    "647": {
       "op": "+",
       "stack_out": [
         "desc_hash#0",
@@ -7589,7 +8212,7 @@
         "i#0"
       ]
     },
-    "571": {
+    "648": {
       "op": "bury 11",
       "defined_out": [
         "i#0"
@@ -7614,10 +8237,10 @@
         "index%0#0"
       ]
     },
-    "573": {
+    "650": {
       "op": "b submit_proposal_for_header@6"
     },
-    "576": {
+    "653": {
       "block": "submit_proposal_after_for@11",
       "stack_in": [
         "desc_hash#0",
@@ -7663,7 +8286,7 @@
         "0"
       ]
     },
-    "577": {
+    "654": {
       "op": "bytec_0 // \"threshold\"",
       "defined_out": [
         "\"threshold\"",
@@ -7691,7 +8314,7 @@
         "\"threshold\""
       ]
     },
-    "578": {
+    "655": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%3#0",
@@ -7719,7 +8342,7 @@
         "maybe_exists%3#0"
       ]
     },
-    "579": {
+    "656": {
       "error": "check self.threshold exists",
       "op": "assert // check self.threshold exists",
       "stack_out": [
@@ -7743,7 +8366,7 @@
         "maybe_value%3#0"
       ]
     },
-    "580": {
+    "657": {
       "op": "dig 10",
       "defined_out": [
         "maybe_value%3#0",
@@ -7771,7 +8394,7 @@
         "verified#0"
       ]
     },
-    "582": {
+    "659": {
       "op": "<=",
       "defined_out": [
         "tmp%21#0",
@@ -7798,7 +8421,7 @@
         "tmp%21#0"
       ]
     },
-    "583": {
+    "660": {
       "error": "Quorum not reached \u2014 proposal rejected",
       "op": "assert // Quorum not reached \u2014 proposal rejected",
       "stack_out": [
@@ -7821,10 +8444,10 @@
         "index%0#0"
       ]
     },
-    "584": {
+    "661": {
       "op": "itxn_begin"
     },
-    "585": {
+    "662": {
       "op": "global MinTxnFee",
       "defined_out": [
         "inner_txn_params%0%%param_Fee_idx_0#0",
@@ -7851,7 +8474,7 @@
         "inner_txn_params%0%%param_Fee_idx_0#0"
       ]
     },
-    "587": {
+    "664": {
       "op": "pushbytes 0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a",
       "defined_out": [
         "0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a",
@@ -7880,7 +8503,7 @@
         "0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a"
       ]
     },
-    "615": {
+    "692": {
       "op": "dig 15",
       "defined_out": [
         "0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a",
@@ -7911,7 +8534,7 @@
         "tmp%7#1"
       ]
     },
-    "617": {
+    "694": {
       "op": "dup",
       "defined_out": [
         "0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a",
@@ -7944,7 +8567,7 @@
         "tmp%7#1 (copy)"
       ]
     },
-    "618": {
+    "695": {
       "op": "cover 3",
       "stack_out": [
         "desc_hash#0",
@@ -7970,7 +8593,7 @@
         "tmp%7#1 (copy)"
       ]
     },
-    "620": {
+    "697": {
       "op": "concat",
       "defined_out": [
         "inner_txn_params%0%%param_Fee_idx_0#0",
@@ -8001,7 +8624,7 @@
         "inner_txn_params%0%%param_Note_idx_0#0"
       ]
     },
-    "621": {
+    "698": {
       "op": "itxn_field Note",
       "stack_out": [
         "desc_hash#0",
@@ -8025,7 +8648,7 @@
         "inner_txn_params%0%%param_Fee_idx_0#0"
       ]
     },
-    "623": {
+    "700": {
       "op": "dig 8",
       "defined_out": [
         "amount#0",
@@ -8056,7 +8679,7 @@
         "amount#0"
       ]
     },
-    "625": {
+    "702": {
       "op": "itxn_field Amount",
       "stack_out": [
         "desc_hash#0",
@@ -8080,7 +8703,7 @@
         "inner_txn_params%0%%param_Fee_idx_0#0"
       ]
     },
-    "627": {
+    "704": {
       "op": "dig 9",
       "defined_out": [
         "amount#0",
@@ -8112,7 +8735,7 @@
         "recipient#0"
       ]
     },
-    "629": {
+    "706": {
       "op": "dup",
       "defined_out": [
         "amount#0",
@@ -8146,7 +8769,7 @@
         "recipient#0 (copy)"
       ]
     },
-    "630": {
+    "707": {
       "op": "itxn_field Receiver",
       "stack_out": [
         "desc_hash#0",
@@ -8171,7 +8794,7 @@
         "recipient#0"
       ]
     },
-    "632": {
+    "709": {
       "op": "intc_2 // pay",
       "defined_out": [
         "amount#0",
@@ -8205,7 +8828,7 @@
         "pay"
       ]
     },
-    "633": {
+    "710": {
       "op": "itxn_field TypeEnum",
       "stack_out": [
         "desc_hash#0",
@@ -8230,7 +8853,7 @@
         "recipient#0"
       ]
     },
-    "635": {
+    "712": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -8255,7 +8878,7 @@
         "inner_txn_params%0%%param_Fee_idx_0#0"
       ]
     },
-    "636": {
+    "713": {
       "op": "itxn_field Fee",
       "stack_out": [
         "desc_hash#0",
@@ -8279,10 +8902,10 @@
         "recipient#0"
       ]
     },
-    "638": {
+    "715": {
       "op": "itxn_submit"
     },
-    "639": {
+    "716": {
       "op": "dig 1",
       "stack_out": [
         "desc_hash#0",
@@ -8307,7 +8930,7 @@
         "tmp%7#1 (copy)"
       ]
     },
-    "641": {
+    "718": {
       "op": "dig 15",
       "defined_out": [
         "amount#0",
@@ -8341,7 +8964,7 @@
         "tmp%9#0"
       ]
     },
-    "643": {
+    "720": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -8374,7 +8997,7 @@
         "tmp%25#0"
       ]
     },
-    "644": {
+    "721": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -8399,7 +9022,7 @@
         "recipient#0"
       ]
     },
-    "645": {
+    "722": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -8431,7 +9054,7 @@
         "tmp%26#0"
       ]
     },
-    "646": {
+    "723": {
       "op": "dig 18",
       "defined_out": [
         "amount#0",
@@ -8465,7 +9088,7 @@
         "desc_hash#0"
       ]
     },
-    "648": {
+    "725": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -8498,7 +9121,7 @@
         "tmp%27#0"
       ]
     },
-    "649": {
+    "726": {
       "op": "pushint 3",
       "defined_out": [
         "3",
@@ -8533,7 +9156,7 @@
         "3"
       ]
     },
-    "651": {
+    "728": {
       "op": "itob",
       "defined_out": [
         "amount#0",
@@ -8568,7 +9191,7 @@
         "tmp%28#0"
       ]
     },
-    "652": {
+    "729": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -8601,7 +9224,7 @@
         "prop_data#0"
       ]
     },
-    "653": {
+    "730": {
       "op": "pushbytes 0x70726f705f",
       "defined_out": [
         "0x70726f705f",
@@ -8636,7 +9259,7 @@
         "0x70726f705f"
       ]
     },
-    "660": {
+    "737": {
       "op": "dig 2",
       "stack_out": [
         "desc_hash#0",
@@ -8662,7 +9285,7 @@
         "tmp%7#1 (copy)"
       ]
     },
-    "662": {
+    "739": {
       "op": "concat",
       "defined_out": [
         "amount#0",
@@ -8697,7 +9320,7 @@
         "tmp%31#0"
       ]
     },
-    "663": {
+    "740": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -8722,7 +9345,7 @@
         "prop_data#0"
       ]
     },
-    "664": {
+    "741": {
       "op": "box_put",
       "stack_out": [
         "desc_hash#0",
@@ -8745,7 +9368,7 @@
         "tmp%7#1"
       ]
     },
-    "665": {
+    "742": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -8778,7 +9401,7 @@
         "0x151f7c75"
       ]
     },
-    "666": {
+    "743": {
       "op": "swap",
       "stack_out": [
         "desc_hash#0",
@@ -8802,7 +9425,7 @@
         "tmp%7#1"
       ]
     },
-    "667": {
+    "744": {
       "op": "concat",
       "stack_out": [
         "desc_hash#0",
@@ -8825,7 +9448,7 @@
         "tmp%9#0"
       ]
     },
-    "668": {
+    "745": {
       "op": "log",
       "stack_out": [
         "desc_hash#0",
@@ -8847,7 +9470,7 @@
         "index%0#0"
       ]
     },
-    "669": {
+    "746": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1",
@@ -8879,7 +9502,7 @@
         "1"
       ]
     },
-    "670": {
+    "747": {
       "op": "return",
       "stack_out": [
         "desc_hash#0",
@@ -8901,7 +9524,7 @@
         "index%0#0"
       ]
     },
-    "671": {
+    "748": {
       "subroutine": "pqc_dao.PQCDao.get_proposal_count[routing]",
       "params": {},
       "block": "get_proposal_count",
@@ -8914,7 +9537,7 @@
         "0"
       ]
     },
-    "672": {
+    "749": {
       "op": "bytec_1 // \"proposal_count\"",
       "defined_out": [
         "\"proposal_count\"",
@@ -8925,7 +9548,7 @@
         "\"proposal_count\""
       ]
     },
-    "673": {
+    "750": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -8936,14 +9559,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "674": {
+    "751": {
       "error": "check self.proposal_count exists",
       "op": "assert // check self.proposal_count exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "675": {
+    "752": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0"
@@ -8952,7 +9575,7 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "676": {
+    "753": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -8963,14 +9586,14 @@
         "0x151f7c75"
       ]
     },
-    "677": {
+    "754": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "678": {
+    "755": {
       "op": "concat",
       "defined_out": [
         "tmp%2#0"
@@ -8979,11 +9602,11 @@
         "tmp%2#0"
       ]
     },
-    "679": {
+    "756": {
       "op": "log",
       "stack_out": []
     },
-    "680": {
+    "757": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -8992,11 +9615,11 @@
         "1"
       ]
     },
-    "681": {
+    "758": {
       "op": "return",
       "stack_out": []
     },
-    "682": {
+    "759": {
       "subroutine": "pqc_dao.PQCDao.get_threshold[routing]",
       "params": {},
       "block": "get_threshold",
@@ -9009,7 +9632,7 @@
         "0"
       ]
     },
-    "683": {
+    "760": {
       "op": "bytec_0 // \"threshold\"",
       "defined_out": [
         "\"threshold\"",
@@ -9020,7 +9643,7 @@
         "\"threshold\""
       ]
     },
-    "684": {
+    "761": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -9031,14 +9654,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "685": {
+    "762": {
       "error": "check self.threshold exists",
       "op": "assert // check self.threshold exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "686": {
+    "763": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0"
@@ -9047,7 +9670,7 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "687": {
+    "764": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -9058,14 +9681,14 @@
         "0x151f7c75"
       ]
     },
-    "688": {
+    "765": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "689": {
+    "766": {
       "op": "concat",
       "defined_out": [
         "tmp%2#0"
@@ -9074,11 +9697,11 @@
         "tmp%2#0"
       ]
     },
-    "690": {
+    "767": {
       "op": "log",
       "stack_out": []
     },
-    "691": {
+    "768": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -9087,11 +9710,11 @@
         "1"
       ]
     },
-    "692": {
+    "769": {
       "op": "return",
       "stack_out": []
     },
-    "693": {
+    "770": {
       "subroutine": "pqc_dao.PQCDao.get_member_count[routing]",
       "params": {},
       "block": "get_member_count",
@@ -9104,7 +9727,7 @@
         "0"
       ]
     },
-    "694": {
+    "771": {
       "op": "bytec_3 // \"num_members\"",
       "defined_out": [
         "\"num_members\"",
@@ -9115,7 +9738,7 @@
         "\"num_members\""
       ]
     },
-    "695": {
+    "772": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -9126,14 +9749,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "696": {
+    "773": {
       "error": "check self.num_members exists",
       "op": "assert // check self.num_members exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "697": {
+    "774": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0"
@@ -9142,7 +9765,7 @@
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "698": {
+    "775": {
       "op": "bytec_2 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -9153,14 +9776,14 @@
         "0x151f7c75"
       ]
     },
-    "699": {
+    "776": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "700": {
+    "777": {
       "op": "concat",
       "defined_out": [
         "tmp%2#0"
@@ -9169,11 +9792,11 @@
         "tmp%2#0"
       ]
     },
-    "701": {
+    "778": {
       "op": "log",
       "stack_out": []
     },
-    "702": {
+    "779": {
       "op": "intc_2 // 1",
       "defined_out": [
         "1"
@@ -9182,7 +9805,7 @@
         "1"
       ]
     },
-    "703": {
+    "780": {
       "op": "return",
       "stack_out": []
     }

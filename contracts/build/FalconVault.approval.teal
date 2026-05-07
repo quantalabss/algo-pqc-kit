@@ -4,20 +4,20 @@
 // algopy.arc4.ARC4Contract.approval_program() -> uint64:
 main:
     intcblock 0 2 1 8
-    bytecblock "nonce" "threshold" "num_signers" "asset_id" 0x706b
+    bytecblock "nonce" "threshold" "num_signers" "asset_id"
     // contracts/falcon_vault.py:28
     // class FalconVault(ARC4Contract):
     txn OnCompletion
     !
     assert
     txn ApplicationID
-    bz main_create_NoOp@8
-    pushbytess 0xb269fea5 0xeeec92d7 // method "release(address,uint64,byte[][],uint64[])void", method "get_config()(uint64,uint64,uint64)"
+    bz main_create_NoOp@9
+    pushbytess 0x2767e5b0 0xb269fea5 0xeeec92d7 // method "bootstrap(byte[][])void", method "release(address,uint64,byte[][],uint64[])void", method "get_config()(uint64,uint64,uint64)"
     txna ApplicationArgs 0
-    match release get_config
+    match bootstrap release get_config
     err
 
-main_create_NoOp@8:
+main_create_NoOp@9:
     // contracts/falcon_vault.py:28
     // class FalconVault(ARC4Contract):
     pushbytes 0xd1fb2493 // method "create(uint64,byte[][],uint64)void"
@@ -47,8 +47,6 @@ dynamic_array_read_byte_length_element:
 
 // falcon_vault.FalconVault.create[routing]() -> void:
 create:
-    pushbytes ""
-    dup
     // contracts/falcon_vault.py:49
     // @arc4.abimethod(allow_actions=["NoOp"], create="require")
     txna ApplicationArgs 1
@@ -59,7 +57,7 @@ create:
     assert // invalid number of bytes for arc4.uint64
     btoi
     txna ApplicationArgs 2
-    dupn 2
+    dup
     intc_0 // 0
     extract_uint16 // on error: invalid array length header
     dup
@@ -125,7 +123,7 @@ create_after_for@4:
     btoi
     // contracts/falcon_vault.py:66
     // assert threshold <= n, "Threshold > signer count"
-    dig 7
+    dig 6
     dup
     dig 7
     dup
@@ -137,11 +135,9 @@ create_after_for@4:
     dup
     assert // Threshold must be >= 1
     // contracts/falcon_vault.py:68
-    // assert n >= UInt64(2), "Need >= 2 signers"
+    // assert n >= UInt64(1), "Vault requires at least 1 member"
     dig 1
-    intc_1 // 2
-    >=
-    assert // Need >= 2 signers
+    assert // Vault requires at least 1 member
     // contracts/falcon_vault.py:69
     // assert n <= UInt64(16), "Max 16 signers"
     dig 1
@@ -168,49 +164,116 @@ create_after_for@4:
     bytec_3 // "asset_id"
     swap
     app_global_put
-    // contracts/falcon_vault.py:76-77
-    // # Store public keys in box storage: box name = "pk" + index (1 byte)
-    // for i in urange(n):
-    intc_0 // 0
-    bury 8
+    // contracts/falcon_vault.py:49
+    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+    intc_2 // 1
+    return
 
-create_for_header@6:
-    // contracts/falcon_vault.py:76-77
-    // # Store public keys in box storage: box name = "pk" + index (1 byte)
-    // for i in urange(n):
+
+// falcon_vault.FalconVault.bootstrap[routing]() -> void:
+bootstrap:
+    pushbytes ""
+    dup
+    // contracts/falcon_vault.py:76
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dupn 2
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    dup
+    cover 2
+    intc_1 // 2
+    *
+    swap
+    dup
+    len
+    swap
+    extract 2 0
+    intc_0 // 0
+
+bootstrap_for_header@1:
+    // contracts/falcon_vault.py:76
+    // @arc4.abimethod
+    dup
+    dig 5
+    <
+    bz bootstrap_after_for@4
+    dupn 2
+    intc_1 // 2
+    *
+    dig 3
+    dup
+    uncover 2
+    extract_uint16 // on error: invalid array encoding
+    dup
     dig 7
+    dup
+    cover 4
+    ==
+    assert // invalid tail pointer for (len+(len+uint8[])[])
+    dig 1
+    len
+    substring3
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_1 // 2
+    +
+    +
+    bury 5
+    intc_2 // 1
+    +
+    bury 1
+    b bootstrap_for_header@1
+
+bootstrap_after_for@4:
+    // contracts/falcon_vault.py:76
+    // @arc4.abimethod
+    dig 3
+    intc_1 // 2
+    +
+    dig 3
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.dynamic_array<arc4.uint8>>
+    // contracts/falcon_vault.py:82
+    // for i in urange(public_keys.length):
+    intc_0 // 0
+    bury 7
+
+bootstrap_for_header@6:
+    // contracts/falcon_vault.py:82
+    // for i in urange(public_keys.length):
+    dig 6
     dig 5
     <
     dup
-    bury 10
-    bz create_after_for@9
-    // contracts/falcon_vault.py:78
-    // box_name = b"pk" + op.itob(i)
-    dig 7
+    bury 9
+    bz bootstrap_after_for@9
+    // contracts/falcon_vault.py:83
+    // box_key = b"pk_" + op.itob(i)
+    dig 6
     dup
     itob
-    bytec 4 // 0x706b
+    pushbytes 0x706b5f
     swap
     concat
-    dig 10
+    dig 9
     assert // index out of bounds
-    // contracts/falcon_vault.py:79
-    // op.Box.put(box_name, public_keys[i].bytes)
+    // contracts/falcon_vault.py:84
+    // op.Box.put(box_key, public_keys[i].bytes)
     dig 7
     dig 2
     callsub dynamic_array_read_byte_length_element
     box_put
-    // contracts/falcon_vault.py:76-77
-    // # Store public keys in box storage: box name = "pk" + index (1 byte)
-    // for i in urange(n):
+    // contracts/falcon_vault.py:82
+    // for i in urange(public_keys.length):
     intc_2 // 1
     +
-    bury 8
-    b create_for_header@6
+    bury 7
+    b bootstrap_for_header@6
 
-create_after_for@9:
-    // contracts/falcon_vault.py:49
-    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+bootstrap_after_for@9:
+    // contracts/falcon_vault.py:76
+    // @arc4.abimethod
     intc_2 // 1
     return
 
@@ -221,7 +284,7 @@ release:
     dup
     pushbytes ""
     dupn 2
-    // contracts/falcon_vault.py:81
+    // contracts/falcon_vault.py:86
     // @arc4.abimethod
     txna ApplicationArgs 1
     dup
@@ -252,7 +315,7 @@ release:
     intc_0 // 0
 
 release_for_header@1:
-    // contracts/falcon_vault.py:81
+    // contracts/falcon_vault.py:86
     // @arc4.abimethod
     dup
     dig 5
@@ -286,7 +349,7 @@ release_for_header@1:
     b release_for_header@1
 
 release_after_for@4:
-    // contracts/falcon_vault.py:81
+    // contracts/falcon_vault.py:86
     // @arc4.abimethod
     dig 3
     intc_1 // 2
@@ -309,14 +372,14 @@ release_after_for@4:
     len
     ==
     assert // invalid number of bytes for arc4.dynamic_array<arc4.uint64>
-    // contracts/falcon_vault.py:95
+    // contracts/falcon_vault.py:100
     // assert signatures.length == signer_indices.length, "Sig/index mismatch"
     dig 5
     dup
     uncover 2
     ==
     assert // Sig/index mismatch
-    // contracts/falcon_vault.py:96
+    // contracts/falcon_vault.py:101
     // assert signatures.length >= self.threshold.value, "Insufficient signatures"
     intc_0 // 0
     bytec_1 // "threshold"
@@ -324,40 +387,40 @@ release_after_for@4:
     assert // check self.threshold exists
     >=
     assert // Insufficient signatures
-    // contracts/falcon_vault.py:100
+    // contracts/falcon_vault.py:105
     // op.itob(self.nonce.value)
     intc_0 // 0
     bytec_0 // "nonce"
     app_global_get_ex
     assert // check self.nonce exists
     itob
-    // contracts/falcon_vault.py:100-101
+    // contracts/falcon_vault.py:105-106
     // op.itob(self.nonce.value)
     // + recipient.bytes
     dig 8
     concat
-    // contracts/falcon_vault.py:102
+    // contracts/falcon_vault.py:107
     // + op.itob(amount)
     dig 7
     itob
-    // contracts/falcon_vault.py:100-102
+    // contracts/falcon_vault.py:105-107
     // op.itob(self.nonce.value)
     // + recipient.bytes
     // + op.itob(amount)
     concat
     bury 13
-    // contracts/falcon_vault.py:105-106
+    // contracts/falcon_vault.py:110-111
     // # Verify each Falcon-1024 signature on-chain (AVM falcon_verify)
     // verified = UInt64(0)
     intc_0 // 0
     bury 9
-    // contracts/falcon_vault.py:107
+    // contracts/falcon_vault.py:112
     // for i in urange(signatures.length):
     intc_0 // 0
     bury 10
 
 release_for_header@6:
-    // contracts/falcon_vault.py:107
+    // contracts/falcon_vault.py:112
     // for i in urange(signatures.length):
     dig 9
     dig 5
@@ -365,7 +428,7 @@ release_for_header@6:
     dup
     bury 12
     bz release_after_for@11
-    // contracts/falcon_vault.py:108
+    // contracts/falcon_vault.py:113
     // idx = signer_indices[i].native
     dig 11
     extract 2 0
@@ -375,7 +438,7 @@ release_for_header@6:
     intc_3 // 8
     *
     extract_uint64
-    // contracts/falcon_vault.py:109
+    // contracts/falcon_vault.py:114
     // assert idx < self.num_signers.value, "Signer index out of range"
     intc_0 // 0
     bytec_2 // "num_signers"
@@ -384,21 +447,21 @@ release_for_header@6:
     dig 1
     >
     assert // Signer index out of range
-    // contracts/falcon_vault.py:111
+    // contracts/falcon_vault.py:116
     // box_name = b"pk" + op.itob(idx)
     itob
-    bytec 4 // 0x706b
+    pushbytes 0x706b
     swap
     concat
-    // contracts/falcon_vault.py:112
+    // contracts/falcon_vault.py:117
     // pubkey, exists = op.Box.get(box_name)
     box_get
-    // contracts/falcon_vault.py:113
+    // contracts/falcon_vault.py:118
     // assert exists, "Public key not found"
     assert // Public key not found
     dig 12
     assert // index out of bounds
-    // contracts/falcon_vault.py:115
+    // contracts/falcon_vault.py:120
     // if op.falcon_verify(message, signatures[i].bytes, pubkey):
     dig 7
     uncover 2
@@ -408,7 +471,7 @@ release_for_header@6:
     uncover 2
     falcon_verify
     bz release_after_if_else@9
-    // contracts/falcon_vault.py:116
+    // contracts/falcon_vault.py:121
     // verified += UInt64(1)
     dig 8
     intc_2 // 1
@@ -416,7 +479,7 @@ release_for_header@6:
     bury 9
 
 release_after_if_else@9:
-    // contracts/falcon_vault.py:107
+    // contracts/falcon_vault.py:112
     // for i in urange(signatures.length):
     dig 9
     intc_2 // 1
@@ -425,7 +488,7 @@ release_after_if_else@9:
     b release_for_header@6
 
 release_after_for@11:
-    // contracts/falcon_vault.py:118
+    // contracts/falcon_vault.py:123
     // assert verified >= self.threshold.value, "Quorum not reached"
     intc_0 // 0
     bytec_1 // "threshold"
@@ -434,7 +497,7 @@ release_after_for@11:
     dig 9
     <=
     assert // Quorum not reached
-    // contracts/falcon_vault.py:120-121
+    // contracts/falcon_vault.py:125-126
     // # Increment nonce before releasing (prevents replay within same block)
     // self.nonce.value += UInt64(1)
     intc_0 // 0
@@ -446,7 +509,7 @@ release_after_for@11:
     bytec_0 // "nonce"
     swap
     app_global_put
-    // contracts/falcon_vault.py:123-124
+    // contracts/falcon_vault.py:128-129
     // # Execute payment
     // if self.asset_id.value == UInt64(0):
     intc_0 // 0
@@ -454,26 +517,26 @@ release_after_for@11:
     app_global_get_ex
     assert // check self.asset_id exists
     bnz release_else_body@14
-    // contracts/falcon_vault.py:125-129
+    // contracts/falcon_vault.py:130-134
     // itxn.Payment(
     //     receiver=recipient.native,
     //     amount=amount,
     //     fee=Global.min_txn_fee,
     // ).submit()
     itxn_begin
-    // contracts/falcon_vault.py:128
+    // contracts/falcon_vault.py:133
     // fee=Global.min_txn_fee,
     global MinTxnFee
     dig 7
     itxn_field Amount
     dig 8
     itxn_field Receiver
-    // contracts/falcon_vault.py:125
+    // contracts/falcon_vault.py:130
     // itxn.Payment(
     intc_2 // pay
     itxn_field TypeEnum
     itxn_field Fee
-    // contracts/falcon_vault.py:125-129
+    // contracts/falcon_vault.py:130-134
     // itxn.Payment(
     //     receiver=recipient.native,
     //     amount=amount,
@@ -482,13 +545,13 @@ release_after_for@11:
     itxn_submit
 
 release_after_if_else@16:
-    // contracts/falcon_vault.py:81
+    // contracts/falcon_vault.py:86
     // @arc4.abimethod
     intc_2 // 1
     return
 
 release_else_body@14:
-    // contracts/falcon_vault.py:131-136
+    // contracts/falcon_vault.py:136-141
     // itxn.AssetTransfer(
     //     asset_receiver=recipient.native,
     //     asset_amount=amount,
@@ -496,10 +559,10 @@ release_else_body@14:
     //     fee=Global.min_txn_fee,
     // ).submit()
     itxn_begin
-    // contracts/falcon_vault.py:135
+    // contracts/falcon_vault.py:140
     // fee=Global.min_txn_fee,
     global MinTxnFee
-    // contracts/falcon_vault.py:134
+    // contracts/falcon_vault.py:139
     // xfer_asset=Asset(self.asset_id.value),
     intc_0 // 0
     bytec_3 // "asset_id"
@@ -510,12 +573,12 @@ release_else_body@14:
     itxn_field AssetAmount
     dig 8
     itxn_field AssetReceiver
-    // contracts/falcon_vault.py:131
+    // contracts/falcon_vault.py:136
     // itxn.AssetTransfer(
     pushint 4 // axfer
     itxn_field TypeEnum
     itxn_field Fee
-    // contracts/falcon_vault.py:131-136
+    // contracts/falcon_vault.py:136-141
     // itxn.AssetTransfer(
     //     asset_receiver=recipient.native,
     //     asset_amount=amount,
@@ -528,28 +591,28 @@ release_else_body@14:
 
 // falcon_vault.FalconVault.get_config[routing]() -> void:
 get_config:
-    // contracts/falcon_vault.py:142
+    // contracts/falcon_vault.py:147
     // arc4.UInt64(self.threshold.value),
     intc_0 // 0
     bytec_1 // "threshold"
     app_global_get_ex
     assert // check self.threshold exists
     itob
-    // contracts/falcon_vault.py:143
+    // contracts/falcon_vault.py:148
     // arc4.UInt64(self.num_signers.value),
     intc_0 // 0
     bytec_2 // "num_signers"
     app_global_get_ex
     assert // check self.num_signers exists
     itob
-    // contracts/falcon_vault.py:144
+    // contracts/falcon_vault.py:149
     // arc4.UInt64(self.nonce.value),
     intc_0 // 0
     bytec_0 // "nonce"
     app_global_get_ex
     assert // check self.nonce exists
     itob
-    // contracts/falcon_vault.py:141-145
+    // contracts/falcon_vault.py:146-150
     // return arc4.Tuple((
     //     arc4.UInt64(self.threshold.value),
     //     arc4.UInt64(self.num_signers.value),
@@ -559,7 +622,7 @@ get_config:
     concat
     swap
     concat
-    // contracts/falcon_vault.py:138
+    // contracts/falcon_vault.py:143
     // @arc4.abimethod(readonly=True)
     pushbytes 0x151f7c75
     swap

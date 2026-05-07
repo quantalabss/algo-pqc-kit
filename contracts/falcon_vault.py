@@ -65,7 +65,7 @@ class FalconVault(ARC4Contract):
         n = public_keys.length
         assert threshold <= n, "Threshold > signer count"
         assert threshold >= UInt64(1), "Threshold must be >= 1"
-        assert n >= UInt64(2), "Need >= 2 signers"
+        assert n >= UInt64(1), "Vault requires at least 1 member"
         assert n <= UInt64(16), "Max 16 signers"
 
         self.threshold.value = threshold
@@ -73,10 +73,15 @@ class FalconVault(ARC4Contract):
         self.nonce.value = UInt64(0)
         self.asset_id.value = asset_id
 
-        # Store public keys in box storage: box name = "pk" + index (1 byte)
-        for i in urange(n):
-            box_name = b"pk" + op.itob(i)
-            op.Box.put(box_name, public_keys[i].bytes)
+    @arc4.abimethod
+    def bootstrap(self, public_keys: arc4.DynamicArray[arc4.DynamicBytes]) -> None:
+        """
+        Allocate boxes for the public keys.
+        Requires the app to be funded first.
+        """
+        for i in urange(public_keys.length):
+            box_key = b"pk_" + op.itob(i)
+            op.Box.put(box_key, public_keys[i].bytes)
 
     @arc4.abimethod
     def release(
