@@ -3,18 +3,14 @@ pqc_dao.py
 ==========
 Post-Quantum DAO Governance Contract — ARC-4 stateful smart contract.
 
-Implements a simple but complete DAO with Falcon-1024 gated governance:
-- Committee members hold Falcon-1024 keys
-- Proposals require M-of-N Falcon signatures to pass
-- Treasury spending released on quorum
-
-This is the first PQC-native DAO implementation for Algorand.
-All governance actions verified on-chain via AVM falcon_verify opcode.
+Architecture Update (v2)
+------------------------
+Implements a Multi-Transaction Session Pattern using Box Storage.
+Bypasses the 2048-byte AVM limit to enable infinite M-of-N sizes.
 """
 
 from algopy import (
     ARC4Contract,
-    BigUInt,
     Bytes,
     Global,
     GlobalState,
@@ -24,42 +20,20 @@ from algopy import (
     arc4,
     itxn,
     op,
-    urange,
 )
 
-
-# Proposal states
-PROPOSAL_ACTIVE = 0
-PROPOSAL_PASSED = 1
-PROPOSAL_REJECTED = 2
-PROPOSAL_EXECUTED = 3
-
+class DaoProposal(arc4.Struct):
+    recipient: arc4.Address
+    amount: arc4.UInt64
+    desc_hash: arc4.DynamicBytes
+    approval_count: arc4.UInt64
+    executed: arc4.Bool
 
 class PQCDao(ARC4Contract):
-    """
-    Post-Quantum DAO
-
-    A decentralized autonomous organization where all governance
-    decisions are authorized by Falcon-1024 multi-signatures verified
-    on-chain. No Ed25519. No classical multisig. Fully PQC.
-
-    Governance flow
-    ---------------
-    1. Any committee member creates a proposal (spending amount + recipient)
-    2. Committee members sign the proposal message off-chain (Falcon-1024)
-    3. Proposer submits M signatures → contract verifies on-chain
-    4. If M-of-N verified → proposal executes, treasury pays out
-
-    Storage layout (box storage)
-    ----------------------------
-    b"pk_{index:8}"      → Falcon-1024 public key (1793 bytes)
-    b"prop_{id:8}"       → Proposal data (ABI-encoded)
-    """
-
     def __init__(self) -> None:
+        self.dao_name = GlobalState(String)
         self.threshold = GlobalState(UInt64)
         self.num_members = GlobalState(UInt64)
-        self.dao_name = GlobalState(String)
         self.proposal_count = GlobalState(UInt64)
 
     @arc4.abimethod(allow_actions=["NoOp"], create="require")
@@ -67,39 +41,23 @@ class PQCDao(ARC4Contract):
         self,
         dao_name: String,
         threshold: UInt64,
-        public_keys: arc4.DynamicArray[arc4.DynamicBytes],
+        num_members: UInt64,
     ) -> None:
-        """
-        Initialize the DAO.
-
-        Parameters
-        ----------
-        dao_name : String
-            Human-readable name for the DAO.
-        threshold : UInt64
-            M — minimum Falcon-1024 signatures required to pass a proposal.
-        public_keys : DynamicArray[DynamicBytes]
-            Falcon-1024 public keys of all N committee members.
-        """
-        n = public_keys.length
         assert threshold >= UInt64(1), "Threshold must be >= 1"
-        assert threshold <= n, "Threshold cannot exceed member count"
-        assert n >= UInt64(1), "DAO requires at least 1 member"
+        assert threshold <= num_members, "Threshold cannot exceed member count"
+        assert num_members >= UInt64(1), "DAO requires at least 1 member"
 
         self.dao_name.value = dao_name
         self.threshold.value = threshold
+        self.num_members.value = num_members
         self.proposal_count.value = UInt64(0)
-        self.num_members.value = n
-        
+
     @arc4.abimethod
-    def bootstrap(self, public_keys: arc4.DynamicArray[arc4.DynamicBytes]) -> None:
-        """
-        Allocate boxes for the public keys.
-        Requires the app to be funded first.
-        """
-        for i in urange(public_keys.length):
-            box_key = b"pk_" + op.itob(i)
-            op.Box.put(box_key, public_keys[i].bytes)
+    def add_member(self, index: UInt64, public_key: arc4.DynamicBytes) -> None:
+        assert Txn.sender == Global.creator_address, "Only creator can initialize"
+        assert index < self.num_members.value, "Index out of bounds"
+        box_key = b"pk_" + op.itob(index)
+        op.Box.put(box_key, public_key.bytes)
 
     @arc4.abimethod
     def submit_proposal(
@@ -107,95 +65,100 @@ class PQCDao(ARC4Contract):
         description: String,
         recipient: arc4.Address,
         amount: UInt64,
-        signatures: arc4.DynamicArray[arc4.DynamicBytes],
-        signer_indices: arc4.DynamicArray[arc4.UInt64],
     ) -> UInt64:
-        """
-        Submit a spending proposal with M-of-N Falcon signatures.
-
-        If the quorum is reached, the proposal is immediately executed
-        (treasury pays out to recipient).
-
-        Parameters
-        ----------
-        description : String
-            Human-readable description of the proposal (stored on-chain).
-        recipient : arc4.Address
-            Beneficiary of the treasury payment.
-        amount : UInt64
-            Payment amount in microALGO.
-        signatures : DynamicArray[DynamicBytes]
-            Falcon-1024 signatures from M committee members.
-        signer_indices : DynamicArray[arc4.UInt64]
-            Indices of the signing committee members.
-
-        Returns
-        -------
-        UInt64
-            Proposal ID (0-indexed).
-        """
         proposal_id = self.proposal_count.value
         self.proposal_count.value = proposal_id + UInt64(1)
 
-        assert signatures.length >= self.threshold.value, "Insufficient signatures"
-        assert signatures.length == signer_indices.length, "Sig/index count mismatch"
-
-        # Build the canonical proposal message:
-        # proposal_id || recipient || amount || sha256(description)
         desc_hash = op.sha256(description.bytes)
+        box_key = b"prop_" + op.itob(proposal_id)
+        
+        prop = DaoProposal(
+            recipient=recipient,
+            amount=arc4.UInt64(amount),
+            desc_hash=arc4.DynamicBytes(desc_hash),
+            approval_count=arc4.UInt64(0),
+            executed=arc4.Bool(False)
+        )
+        op.Box.put(box_key, prop.bytes)
+        return proposal_id
+
+    @arc4.abimethod
+    def submit_vote(
+        self,
+        proposal_id: UInt64,
+        signer_index: UInt64,
+        signature: arc4.DynamicBytes
+    ) -> None:
+        assert signer_index < self.num_members.value, "Invalid signer index"
+
+        prop_key = b"prop_" + op.itob(proposal_id)
+        prop_bytes, exists = op.Box.get(prop_key)
+        assert exists, "Proposal does not exist"
+        
+        prop = DaoProposal.from_bytes(prop_bytes)
+        assert not prop.executed.native, "Already executed"
+
+        sig_key = b"sig_" + op.itob(proposal_id) + b"_" + op.itob(signer_index)
+        sig_data, sig_exists = op.Box.get(sig_key)
+        assert not sig_exists, "Signer already voted"
+
+        pk_key = b"pk_" + op.itob(signer_index)
+        pubkey, pk_exists = op.Box.get(pk_key)
+        assert pk_exists, "Signer public key not initialized"
+
         message = (
             op.itob(proposal_id)
-            + recipient.bytes
-            + op.itob(amount)
-            + desc_hash
+            + prop.recipient.bytes
+            + op.itob(prop.amount.native)
+            + prop.desc_hash.bytes
         )
+        assert op.falcon_verify(message, signature.bytes, pubkey), "Invalid Falcon-1024 signature"
 
-        # Verify M-of-N Falcon signatures on-chain
-        verified = UInt64(0)
-        for i in urange(signatures.length):
-            idx = signer_indices[i].native
-            assert idx < self.num_members.value, "Member index out of range"
+        op.Box.put(sig_key, Bytes(b"1"))
 
-            box_key = b"pk_" + op.itob(idx)
-            pubkey, exists = op.Box.get(box_key)
-            assert exists, "Public key not found"
+        new_prop = DaoProposal(
+            recipient=prop.recipient,
+            amount=prop.amount,
+            desc_hash=prop.desc_hash.copy(),
+            approval_count=arc4.UInt64(prop.approval_count.native + 1),
+            executed=prop.executed
+        )
+        op.Box.put(prop_key, new_prop.bytes)
 
-            if op.falcon_verify(message, signatures[i].bytes, pubkey):
-                verified += UInt64(1)
+    @arc4.abimethod
+    def execute_proposal(self, proposal_id: UInt64) -> None:
+        prop_key = b"prop_" + op.itob(proposal_id)
+        prop_bytes, exists = op.Box.get(prop_key)
+        assert exists, "Proposal does not exist"
+        
+        prop = DaoProposal.from_bytes(prop_bytes)
+        assert not prop.executed.native, "Already executed"
+        assert prop.approval_count.native >= self.threshold.value, "Quorum not reached"
 
-        assert verified >= self.threshold.value, "Quorum not reached — proposal rejected"
+        new_prop = DaoProposal(
+            recipient=prop.recipient,
+            amount=prop.amount,
+            desc_hash=prop.desc_hash.copy(),
+            approval_count=prop.approval_count,
+            executed=arc4.Bool(True)
+        )
+        op.Box.put(prop_key, new_prop.bytes)
 
-        # Quorum reached — execute the treasury payment
         itxn.Payment(
-            receiver=recipient.native,
-            amount=amount,
+            receiver=prop.recipient.native,
+            amount=prop.amount.native,
             fee=Global.min_txn_fee,
             note=b"algo-pqc-kit:dao:proposal:" + op.itob(proposal_id),
         ).submit()
 
-        # Store proposal record in box storage for auditability
-        prop_data = (
-            op.itob(proposal_id)
-            + op.itob(amount)
-            + recipient.bytes
-            + desc_hash
-            + op.itob(UInt64(PROPOSAL_EXECUTED))
-        )
-        op.Box.put(b"prop_" + op.itob(proposal_id), prop_data)
-
-        return proposal_id
-
     @arc4.abimethod(readonly=True)
     def get_proposal_count(self) -> UInt64:
-        """Return total number of proposals submitted."""
         return self.proposal_count.value
 
     @arc4.abimethod(readonly=True)
     def get_threshold(self) -> UInt64:
-        """Return the DAO's signature threshold (M)."""
         return self.threshold.value
 
     @arc4.abimethod(readonly=True)
     def get_member_count(self) -> UInt64:
-        """Return total committee size (N)."""
         return self.num_members.value

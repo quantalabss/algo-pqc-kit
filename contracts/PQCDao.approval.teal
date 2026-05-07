@@ -1,0 +1,622 @@
+#pragma version 12
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 1 8 2
+    bytecblock "num_members" "proposal_count" 0x151f7c75 "threshold" 0x70726f705f 0x706b5f 0x0033
+    // contracts/pqc_dao.py:32
+    // class PQCDao(ARC4Contract):
+    txn OnCompletion
+    !
+    assert
+    txn ApplicationID
+    bz main_create_NoOp@13
+    pushbytess 0xa1ebe726 0x0d5cc3e6 0xb5ce76bf 0x338bec23 0x6d8fba74 0xc650d5a4 0xe27d501d // method "add_member(uint64,byte[])void", method "submit_proposal(string,address,uint64)uint64", method "submit_vote(uint64,uint64,byte[])void", method "execute_proposal(uint64)void", method "get_proposal_count()uint64", method "get_threshold()uint64", method "get_member_count()uint64"
+    txna ApplicationArgs 0
+    match add_member submit_proposal submit_vote execute_proposal get_proposal_count get_threshold get_member_count
+    err
+
+main_create_NoOp@13:
+    // contracts/pqc_dao.py:32
+    // class PQCDao(ARC4Contract):
+    pushbytes 0x88c940f8 // method "create(string,uint64,uint64)void"
+    txna ApplicationArgs 0
+    match create
+    err
+
+
+// pqc_dao.PQCDao.create[routing]() -> void:
+create:
+    // contracts/pqc_dao.py:39
+    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // contracts/pqc_dao.py:46
+    // assert threshold >= UInt64(1), "Threshold must be >= 1"
+    dig 1
+    assert // Threshold must be >= 1
+    // contracts/pqc_dao.py:47
+    // assert threshold <= num_members, "Threshold cannot exceed member count"
+    dup2
+    <=
+    assert // Threshold cannot exceed member count
+    // contracts/pqc_dao.py:48
+    // assert num_members >= UInt64(1), "DAO requires at least 1 member"
+    dup
+    assert // DAO requires at least 1 member
+    // contracts/pqc_dao.py:50
+    // self.dao_name.value = dao_name
+    pushbytes "dao_name"
+    uncover 3
+    app_global_put
+    // contracts/pqc_dao.py:51
+    // self.threshold.value = threshold
+    bytec_3 // "threshold"
+    uncover 2
+    app_global_put
+    // contracts/pqc_dao.py:52
+    // self.num_members.value = num_members
+    bytec_0 // "num_members"
+    swap
+    app_global_put
+    // contracts/pqc_dao.py:53
+    // self.proposal_count.value = UInt64(0)
+    bytec_1 // "proposal_count"
+    intc_0 // 0
+    app_global_put
+    // contracts/pqc_dao.py:39
+    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.add_member[routing]() -> void:
+add_member:
+    // contracts/pqc_dao.py:55
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // contracts/pqc_dao.py:57
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // contracts/pqc_dao.py:58
+    // assert index < self.num_members.value, "Index out of bounds"
+    intc_0 // 0
+    bytec_0 // "num_members"
+    app_global_get_ex
+    assert // check self.num_members exists
+    dig 2
+    >
+    assert // Index out of bounds
+    // contracts/pqc_dao.py:59
+    // box_key = b"pk_" + op.itob(index)
+    swap
+    itob
+    bytec 5 // 0x706b5f
+    swap
+    concat
+    // contracts/pqc_dao.py:60
+    // op.Box.put(box_key, public_key.bytes)
+    swap
+    box_put
+    // contracts/pqc_dao.py:55
+    // @arc4.abimethod
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.submit_proposal[routing]() -> void:
+submit_proposal:
+    // contracts/pqc_dao.py:62
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    pushint 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    // contracts/pqc_dao.py:69
+    // proposal_id = self.proposal_count.value
+    intc_0 // 0
+    bytec_1 // "proposal_count"
+    app_global_get_ex
+    assert // check self.proposal_count exists
+    // contracts/pqc_dao.py:70
+    // self.proposal_count.value = proposal_id + UInt64(1)
+    dup
+    intc_1 // 1
+    +
+    bytec_1 // "proposal_count"
+    swap
+    app_global_put
+    // contracts/pqc_dao.py:72
+    // desc_hash = op.sha256(description.bytes)
+    uncover 3
+    sha256
+    // contracts/pqc_dao.py:73
+    // box_key = b"prop_" + op.itob(proposal_id)
+    swap
+    itob
+    bytec 4 // 0x70726f705f
+    dig 1
+    concat
+    // contracts/pqc_dao.py:78
+    // desc_hash=arc4.DynamicBytes(desc_hash),
+    pushbytes 0x0020
+    uncover 3
+    concat
+    // contracts/pqc_dao.py:75-81
+    // prop = DaoProposal(
+    //     recipient=recipient,
+    //     amount=arc4.UInt64(amount),
+    //     desc_hash=arc4.DynamicBytes(desc_hash),
+    //     approval_count=arc4.UInt64(0),
+    //     executed=arc4.Bool(False)
+    // )
+    uncover 4
+    uncover 4
+    concat
+    pushbytes 0x0033000000000000000000
+    concat
+    swap
+    concat
+    // contracts/pqc_dao.py:82
+    // op.Box.put(box_key, prop.bytes)
+    box_put
+    // contracts/pqc_dao.py:62
+    // @arc4.abimethod
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.submit_vote[routing]() -> void:
+submit_vote:
+    // contracts/pqc_dao.py:85
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // contracts/pqc_dao.py:92
+    // assert signer_index < self.num_members.value, "Invalid signer index"
+    intc_0 // 0
+    bytec_0 // "num_members"
+    app_global_get_ex
+    assert // check self.num_members exists
+    dig 2
+    >
+    assert // Invalid signer index
+    // contracts/pqc_dao.py:94
+    // prop_key = b"prop_" + op.itob(proposal_id)
+    uncover 2
+    itob
+    bytec 4 // 0x70726f705f
+    dig 1
+    concat
+    // contracts/pqc_dao.py:95
+    // prop_bytes, exists = op.Box.get(prop_key)
+    dup
+    box_get
+    // contracts/pqc_dao.py:96
+    // assert exists, "Proposal does not exist"
+    assert // Proposal does not exist
+    // contracts/pqc_dao.py:99
+    // assert not prop.executed.native, "Already executed"
+    dup
+    pushint 400
+    getbit
+    pushbytes 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    dup
+    intc_0 // 0
+    getbit
+    !
+    assert // Already executed
+    // contracts/pqc_dao.py:101
+    // sig_key = b"sig_" + op.itob(proposal_id) + b"_" + op.itob(signer_index)
+    pushbytes 0x7369675f
+    dig 4
+    concat
+    pushbytes 0x5f
+    concat
+    uncover 6
+    itob
+    swap
+    dig 1
+    concat
+    // contracts/pqc_dao.py:102
+    // sig_data, sig_exists = op.Box.get(sig_key)
+    dup
+    box_len
+    bury 1
+    // contracts/pqc_dao.py:103
+    // assert not sig_exists, "Signer already voted"
+    !
+    assert // Signer already voted
+    // contracts/pqc_dao.py:105
+    // pk_key = b"pk_" + op.itob(signer_index)
+    bytec 5 // 0x706b5f
+    uncover 2
+    concat
+    // contracts/pqc_dao.py:106
+    // pubkey, pk_exists = op.Box.get(pk_key)
+    box_get
+    // contracts/pqc_dao.py:107
+    // assert pk_exists, "Signer public key not initialized"
+    assert // Signer public key not initialized
+    // contracts/pqc_dao.py:111
+    // + prop.recipient.bytes
+    dig 3
+    extract 0 32
+    // contracts/pqc_dao.py:110-111
+    // op.itob(proposal_id)
+    // + prop.recipient.bytes
+    uncover 6
+    dig 1
+    concat
+    // contracts/pqc_dao.py:112
+    // + op.itob(prop.amount.native)
+    dig 5
+    extract 32 8
+    // contracts/pqc_dao.py:110-112
+    // op.itob(proposal_id)
+    // + prop.recipient.bytes
+    // + op.itob(prop.amount.native)
+    swap
+    dig 1
+    concat
+    // contracts/pqc_dao.py:113
+    // + prop.desc_hash.bytes
+    dig 6
+    pushint 40
+    extract_uint16
+    dig 7
+    len
+    dig 8
+    cover 2
+    substring3
+    // contracts/pqc_dao.py:110-113
+    // op.itob(proposal_id)
+    // + prop.recipient.bytes
+    // + op.itob(prop.amount.native)
+    // + prop.desc_hash.bytes
+    swap
+    dig 1
+    concat
+    // contracts/pqc_dao.py:115
+    // assert op.falcon_verify(message, signature.bytes, pubkey), "Invalid Falcon-1024 signature"
+    uncover 9
+    uncover 5
+    falcon_verify
+    assert // Invalid Falcon-1024 signature
+    // contracts/pqc_dao.py:117
+    // op.Box.put(sig_key, Bytes(b"1"))
+    uncover 3
+    pushbytes 0x31
+    box_put
+    // contracts/pqc_dao.py:123
+    // approval_count=arc4.UInt64(prop.approval_count.native + 1),
+    uncover 4
+    pushint 42
+    extract_uint64
+    intc_1 // 1
+    +
+    itob
+    // contracts/pqc_dao.py:119-125
+    // new_prop = DaoProposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     desc_hash=prop.desc_hash.copy(),
+    //     approval_count=arc4.UInt64(prop.approval_count.native + 1),
+    //     executed=prop.executed
+    // )
+    uncover 3
+    uncover 3
+    concat
+    bytec 6 // 0x0033
+    concat
+    swap
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    // contracts/pqc_dao.py:126
+    // op.Box.put(prop_key, new_prop.bytes)
+    box_put
+    // contracts/pqc_dao.py:85
+    // @arc4.abimethod
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.execute_proposal[routing]() -> void:
+execute_proposal:
+    // contracts/pqc_dao.py:128
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // contracts/pqc_dao.py:130
+    // prop_key = b"prop_" + op.itob(proposal_id)
+    itob
+    bytec 4 // 0x70726f705f
+    dig 1
+    concat
+    // contracts/pqc_dao.py:131
+    // prop_bytes, exists = op.Box.get(prop_key)
+    dup
+    box_get
+    // contracts/pqc_dao.py:132
+    // assert exists, "Proposal does not exist"
+    assert // Proposal does not exist
+    // contracts/pqc_dao.py:135
+    // assert not prop.executed.native, "Already executed"
+    dup
+    pushint 400
+    getbit
+    pushbytes 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    intc_0 // 0
+    getbit
+    !
+    assert // Already executed
+    // contracts/pqc_dao.py:136
+    // assert prop.approval_count.native >= self.threshold.value, "Quorum not reached"
+    dup
+    extract 42 8
+    dig 1
+    pushint 42
+    extract_uint64
+    intc_0 // 0
+    bytec_3 // "threshold"
+    app_global_get_ex
+    assert // check self.threshold exists
+    >=
+    assert // Quorum not reached
+    // contracts/pqc_dao.py:139
+    // recipient=prop.recipient,
+    dig 1
+    extract 0 32
+    // contracts/pqc_dao.py:140
+    // amount=prop.amount,
+    dig 2
+    extract 32 8
+    // contracts/pqc_dao.py:141
+    // desc_hash=prop.desc_hash.copy(),
+    dig 3
+    pushint 40
+    extract_uint16
+    dig 4
+    len
+    dig 5
+    cover 2
+    substring3
+    // contracts/pqc_dao.py:138-144
+    // new_prop = DaoProposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     desc_hash=prop.desc_hash.copy(),
+    //     approval_count=prop.approval_count,
+    //     executed=arc4.Bool(True)
+    // )
+    dig 2
+    uncover 2
+    concat
+    bytec 6 // 0x0033
+    concat
+    uncover 3
+    concat
+    // contracts/pqc_dao.py:143
+    // executed=arc4.Bool(True)
+    pushbytes 0x80
+    // contracts/pqc_dao.py:138-144
+    // new_prop = DaoProposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     desc_hash=prop.desc_hash.copy(),
+    //     approval_count=prop.approval_count,
+    //     executed=arc4.Bool(True)
+    // )
+    concat
+    swap
+    concat
+    // contracts/pqc_dao.py:145
+    // op.Box.put(prop_key, new_prop.bytes)
+    uncover 3
+    swap
+    box_put
+    // contracts/pqc_dao.py:147-152
+    // itxn.Payment(
+    //     receiver=prop.recipient.native,
+    //     amount=prop.amount.native,
+    //     fee=Global.min_txn_fee,
+    //     note=b"algo-pqc-kit:dao:proposal:" + op.itob(proposal_id),
+    // ).submit()
+    itxn_begin
+    // contracts/pqc_dao.py:150
+    // fee=Global.min_txn_fee,
+    global MinTxnFee
+    // contracts/pqc_dao.py:149
+    // amount=prop.amount.native,
+    uncover 2
+    // contracts/pqc_dao.py:140
+    // amount=prop.amount,
+    pushint 32
+    // contracts/pqc_dao.py:149
+    // amount=prop.amount.native,
+    extract_uint64
+    // contracts/pqc_dao.py:151
+    // note=b"algo-pqc-kit:dao:proposal:" + op.itob(proposal_id),
+    pushbytes 0x616c676f2d7071632d6b69743a64616f3a70726f706f73616c3a
+    uncover 4
+    concat
+    itxn_field Note
+    itxn_field Amount
+    swap
+    itxn_field Receiver
+    // contracts/pqc_dao.py:147
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    itxn_field Fee
+    // contracts/pqc_dao.py:147-152
+    // itxn.Payment(
+    //     receiver=prop.recipient.native,
+    //     amount=prop.amount.native,
+    //     fee=Global.min_txn_fee,
+    //     note=b"algo-pqc-kit:dao:proposal:" + op.itob(proposal_id),
+    // ).submit()
+    itxn_submit
+    // contracts/pqc_dao.py:128
+    // @arc4.abimethod
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.get_proposal_count[routing]() -> void:
+get_proposal_count:
+    // contracts/pqc_dao.py:156
+    // return self.proposal_count.value
+    intc_0 // 0
+    bytec_1 // "proposal_count"
+    app_global_get_ex
+    assert // check self.proposal_count exists
+    // contracts/pqc_dao.py:154
+    // @arc4.abimethod(readonly=True)
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.get_threshold[routing]() -> void:
+get_threshold:
+    // contracts/pqc_dao.py:160
+    // return self.threshold.value
+    intc_0 // 0
+    bytec_3 // "threshold"
+    app_global_get_ex
+    assert // check self.threshold exists
+    // contracts/pqc_dao.py:158
+    // @arc4.abimethod(readonly=True)
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// pqc_dao.PQCDao.get_member_count[routing]() -> void:
+get_member_count:
+    // contracts/pqc_dao.py:164
+    // return self.num_members.value
+    intc_0 // 0
+    bytec_0 // "num_members"
+    app_global_get_ex
+    assert // check self.num_members exists
+    // contracts/pqc_dao.py:162
+    // @arc4.abimethod(readonly=True)
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return

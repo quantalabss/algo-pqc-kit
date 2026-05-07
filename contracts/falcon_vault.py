@@ -6,7 +6,12 @@ M-of-N Falcon-1024 threshold vault — ARC-4 stateful smart contract.
 Uses AVM v12 `falcon_verify` opcode to enforce a post-quantum quorum
 before releasing funds. No Ed25519 anywhere — fully quantum-resistant.
 
-AVM opcode: falcon_verify(data, sig, pubkey) → bool  [cost: 1700 each]
+Architecture Update (v2)
+------------------------
+Implements a Multi-Transaction Session Pattern to bypass the 2048-byte
+ApplicationArgs limit. Public keys and signatures are aggregated sequentially
+via Box Storage, enabling theoretically infinite M-of-N threshold sizes for
+massive PQC public keys (1793B) and signatures (1220B).
 """
 
 from algopy import (
@@ -15,136 +20,139 @@ from algopy import (
     Bytes,
     Global,
     GlobalState,
-    String,
     Txn,
     UInt64,
     arc4,
     itxn,
     op,
-    urange,
 )
 
+class Proposal(arc4.Struct):
+    recipient: arc4.Address
+    amount: arc4.UInt64
+    approval_count: arc4.UInt64
+    executed: arc4.Bool
 
 class FalconVault(ARC4Contract):
     """
     M-of-N Post-Quantum Threshold Vault
-
-    A treasury that releases ALGO or ASAs only when M-of-N Falcon-1024
-    signatures are verified on-chain via the AVM falcon_verify opcode.
-
-    Security properties
-    -------------------
-    - Quantum-resistant: all verification uses falcon_verify (NIST FN-DSA)
-    - No single point of failure: M < N means one key loss doesn't freeze funds
-    - Replay protection: message includes nonce + recipient + amount
-    - No admin backdoor: committee is fixed at deployment
     """
 
     def __init__(self) -> None:
         self.threshold = GlobalState(UInt64)
         self.num_signers = GlobalState(UInt64)
-        self.nonce = GlobalState(UInt64)
         self.asset_id = GlobalState(UInt64)
+        self.proposal_count = GlobalState(UInt64)
 
     @arc4.abimethod(allow_actions=["NoOp"], create="require")
-    def create(
-        self,
-        threshold: UInt64,
-        public_keys: arc4.DynamicArray[arc4.DynamicBytes],
-        asset_id: UInt64,
-    ) -> None:
-        """
-        Deploy the vault with an immutable M-of-N Falcon committee.
-
-        Parameters
-        ----------
-        threshold : UInt64   M — minimum signatures required
-        public_keys          N Falcon-1024 public keys (1793 bytes each)
-        asset_id             0 = ALGO vault, ASA ID = token vault
-        """
-        n = public_keys.length
-        assert threshold <= n, "Threshold > signer count"
+    def create(self, threshold: UInt64, num_signers: UInt64, asset_id: UInt64) -> None:
+        assert threshold <= num_signers, "Threshold > signer count"
         assert threshold >= UInt64(1), "Threshold must be >= 1"
-        assert n >= UInt64(1), "Vault requires at least 1 member"
-        assert n <= UInt64(16), "Max 16 signers"
-
+        assert num_signers >= UInt64(1), "Vault requires at least 1 member"
+        
         self.threshold.value = threshold
-        self.num_signers.value = n
-        self.nonce.value = UInt64(0)
+        self.num_signers.value = num_signers
         self.asset_id.value = asset_id
+        self.proposal_count.value = UInt64(0)
 
     @arc4.abimethod
-    def bootstrap(self, public_keys: arc4.DynamicArray[arc4.DynamicBytes]) -> None:
+    def add_signer(self, index: UInt64, public_key: arc4.DynamicBytes) -> None:
         """
-        Allocate boxes for the public keys.
-        Requires the app to be funded first.
+        Sequentially add a 1793B Falcon-1024 public key into Box Storage.
+        Bypasses the 2048B argument limit of the AVM.
         """
-        for i in urange(public_keys.length):
-            box_key = b"pk_" + op.itob(i)
-            op.Box.put(box_key, public_keys[i].bytes)
+        assert Txn.sender == Global.creator_address, "Only creator can initialize"
+        assert index < self.num_signers.value, "Index out of bounds"
+        box_key = b"pk_" + op.itob(index)
+        op.Box.put(box_key, public_key.bytes)
 
     @arc4.abimethod
-    def release(
+    def propose_release(self, recipient: arc4.Address, amount: UInt64) -> UInt64:
+        """Create a new payment proposal."""
+        proposal_id = self.proposal_count.value
+        self.proposal_count.value = proposal_id + UInt64(1)
+        
+        box_key = b"prop_" + op.itob(proposal_id)
+        
+        prop = Proposal(
+            recipient=recipient,
+            amount=arc4.UInt64(amount),
+            approval_count=arc4.UInt64(0),
+            executed=arc4.Bool(False)
+        )
+        op.Box.put(box_key, prop.bytes)
+        return proposal_id
+
+    @arc4.abimethod
+    def submit_signature(
         self,
-        recipient: arc4.Address,
-        amount: UInt64,
-        signatures: arc4.DynamicArray[arc4.DynamicBytes],
-        signer_indices: arc4.DynamicArray[arc4.UInt64],
+        proposal_id: UInt64,
+        signer_index: UInt64,
+        signature: arc4.DynamicBytes
     ) -> None:
         """
-        Release funds after M-of-N Falcon-1024 verification.
-
-        The signed message is: itob(nonce) || recipient_bytes || itob(amount)
-        This prevents replay attacks across different release calls.
+        Submit a single 1220B Falcon-1024 signature for a proposal.
         """
-        assert signatures.length == signer_indices.length, "Sig/index mismatch"
-        assert signatures.length >= self.threshold.value, "Insufficient signatures"
+        assert signer_index < self.num_signers.value, "Invalid signer index"
+        
+        prop_key = b"prop_" + op.itob(proposal_id)
+        prop_bytes, exists = op.Box.get(prop_key)
+        assert exists, "Proposal does not exist"
+        
+        prop = Proposal.from_bytes(prop_bytes)
+        assert not prop.executed.native, "Already executed"
 
-        # Build replay-protected message
-        message = (
-            op.itob(self.nonce.value)
-            + recipient.bytes
-            + op.itob(amount)
+        sig_key = b"sig_" + op.itob(proposal_id) + b"_" + op.itob(signer_index)
+        sig_data, sig_exists = op.Box.get(sig_key)
+        assert not sig_exists, "Signer already approved"
+
+        pk_key = b"pk_" + op.itob(signer_index)
+        pubkey, pk_exists = op.Box.get(pk_key)
+        assert pk_exists, "Signer public key not initialized"
+
+        # payload: itob(proposal_id) || recipient bytes || itob(amount)
+        message = op.itob(proposal_id) + prop.recipient.bytes + op.itob(prop.amount.native)
+        assert op.falcon_verify(message, signature.bytes, pubkey), "Invalid Falcon-1024 signature"
+
+        op.Box.put(sig_key, Bytes(b"1"))
+
+        new_prop = Proposal(
+            recipient=prop.recipient,
+            amount=prop.amount,
+            approval_count=arc4.UInt64(prop.approval_count.native + 1),
+            executed=prop.executed
         )
+        op.Box.put(prop_key, new_prop.bytes)
 
-        # Verify each Falcon-1024 signature on-chain (AVM falcon_verify)
-        verified = UInt64(0)
-        for i in urange(signatures.length):
-            idx = signer_indices[i].native
-            assert idx < self.num_signers.value, "Signer index out of range"
+    @arc4.abimethod
+    def execute_release(self, proposal_id: UInt64) -> None:
+        """Execute the payment if threshold is met."""
+        prop_key = b"prop_" + op.itob(proposal_id)
+        prop_bytes, exists = op.Box.get(prop_key)
+        assert exists, "Proposal does not exist"
+        
+        prop = Proposal.from_bytes(prop_bytes)
+        assert not prop.executed.native, "Already executed"
+        assert prop.approval_count.native >= self.threshold.value, "Quorum not reached"
 
-            box_name = b"pk" + op.itob(idx)
-            pubkey, exists = op.Box.get(box_name)
-            assert exists, "Public key not found"
+        new_prop = Proposal(
+            recipient=prop.recipient,
+            amount=prop.amount,
+            approval_count=prop.approval_count,
+            executed=arc4.Bool(True)
+        )
+        op.Box.put(prop_key, new_prop.bytes)
 
-            if op.falcon_verify(message, signatures[i].bytes, pubkey):
-                verified += UInt64(1)
-
-        assert verified >= self.threshold.value, "Quorum not reached"
-
-        # Increment nonce before releasing (prevents replay within same block)
-        self.nonce.value += UInt64(1)
-
-        # Execute payment
         if self.asset_id.value == UInt64(0):
             itxn.Payment(
-                receiver=recipient.native,
-                amount=amount,
+                receiver=prop.recipient.native,
+                amount=prop.amount.native,
                 fee=Global.min_txn_fee,
             ).submit()
         else:
             itxn.AssetTransfer(
-                asset_receiver=recipient.native,
-                asset_amount=amount,
+                asset_receiver=prop.recipient.native,
+                asset_amount=prop.amount.native,
                 xfer_asset=Asset(self.asset_id.value),
                 fee=Global.min_txn_fee,
             ).submit()
-
-    @arc4.abimethod(readonly=True)
-    def get_config(self) -> arc4.Tuple[arc4.UInt64, arc4.UInt64, arc4.UInt64]:
-        """Return (threshold, num_signers, nonce) — read-only."""
-        return arc4.Tuple((
-            arc4.UInt64(self.threshold.value),
-            arc4.UInt64(self.num_signers.value),
-            arc4.UInt64(self.nonce.value),
-        ))

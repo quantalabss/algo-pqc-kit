@@ -1,0 +1,542 @@
+#pragma version 12
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 8 1 32
+    bytecblock "num_signers" "asset_id" "proposal_count" 0x70726f705f "threshold" 0x706b5f
+    // contracts/falcon_vault.py:36
+    // class FalconVault(ARC4Contract):
+    txn OnCompletion
+    !
+    assert
+    txn ApplicationID
+    bz main_create_NoOp@10
+    pushbytess 0x71870a7a 0xc4f68474 0x51207b16 0xb3290bd0 // method "add_signer(uint64,byte[])void", method "propose_release(address,uint64)uint64", method "submit_signature(uint64,uint64,byte[])void", method "execute_release(uint64)void"
+    txna ApplicationArgs 0
+    match add_signer propose_release submit_signature execute_release
+    err
+
+main_create_NoOp@10:
+    // contracts/falcon_vault.py:36
+    // class FalconVault(ARC4Contract):
+    pushbytes 0x7efda4d2 // method "create(uint64,uint64,uint64)void"
+    txna ApplicationArgs 0
+    match create
+    err
+
+
+// falcon_vault.FalconVault.create[routing]() -> void:
+create:
+    // contracts/falcon_vault.py:47
+    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // contracts/falcon_vault.py:49
+    // assert threshold <= num_signers, "Threshold > signer count"
+    dig 2
+    dig 2
+    <=
+    assert // Threshold > signer count
+    // contracts/falcon_vault.py:50
+    // assert threshold >= UInt64(1), "Threshold must be >= 1"
+    dig 2
+    assert // Threshold must be >= 1
+    // contracts/falcon_vault.py:51
+    // assert num_signers >= UInt64(1), "Vault requires at least 1 member"
+    dig 1
+    assert // Vault requires at least 1 member
+    // contracts/falcon_vault.py:53
+    // self.threshold.value = threshold
+    bytec 4 // "threshold"
+    uncover 3
+    app_global_put
+    // contracts/falcon_vault.py:54
+    // self.num_signers.value = num_signers
+    bytec_0 // "num_signers"
+    uncover 2
+    app_global_put
+    // contracts/falcon_vault.py:55
+    // self.asset_id.value = asset_id
+    bytec_1 // "asset_id"
+    swap
+    app_global_put
+    // contracts/falcon_vault.py:56
+    // self.proposal_count.value = UInt64(0)
+    bytec_2 // "proposal_count"
+    intc_0 // 0
+    app_global_put
+    // contracts/falcon_vault.py:47
+    // @arc4.abimethod(allow_actions=["NoOp"], create="require")
+    intc_2 // 1
+    return
+
+
+// falcon_vault.FalconVault.add_signer[routing]() -> void:
+add_signer:
+    // contracts/falcon_vault.py:58
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // contracts/falcon_vault.py:64
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // contracts/falcon_vault.py:65
+    // assert index < self.num_signers.value, "Index out of bounds"
+    intc_0 // 0
+    bytec_0 // "num_signers"
+    app_global_get_ex
+    assert // check self.num_signers exists
+    dig 2
+    >
+    assert // Index out of bounds
+    // contracts/falcon_vault.py:66
+    // box_key = b"pk_" + op.itob(index)
+    swap
+    itob
+    bytec 5 // 0x706b5f
+    swap
+    concat
+    // contracts/falcon_vault.py:67
+    // op.Box.put(box_key, public_key.bytes)
+    swap
+    box_put
+    // contracts/falcon_vault.py:58
+    // @arc4.abimethod
+    intc_2 // 1
+    return
+
+
+// falcon_vault.FalconVault.propose_release[routing]() -> void:
+propose_release:
+    // contracts/falcon_vault.py:69
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    // contracts/falcon_vault.py:72
+    // proposal_id = self.proposal_count.value
+    intc_0 // 0
+    bytec_2 // "proposal_count"
+    app_global_get_ex
+    assert // check self.proposal_count exists
+    // contracts/falcon_vault.py:73
+    // self.proposal_count.value = proposal_id + UInt64(1)
+    dup
+    intc_2 // 1
+    +
+    bytec_2 // "proposal_count"
+    swap
+    app_global_put
+    // contracts/falcon_vault.py:75
+    // box_key = b"prop_" + op.itob(proposal_id)
+    itob
+    bytec_3 // 0x70726f705f
+    dig 1
+    concat
+    // contracts/falcon_vault.py:77-82
+    // prop = Proposal(
+    //     recipient=recipient,
+    //     amount=arc4.UInt64(amount),
+    //     approval_count=arc4.UInt64(0),
+    //     executed=arc4.Bool(False)
+    // )
+    uncover 3
+    uncover 3
+    concat
+    pushbytes 0x000000000000000000
+    concat
+    // contracts/falcon_vault.py:83
+    // op.Box.put(box_key, prop.bytes)
+    box_put
+    // contracts/falcon_vault.py:69
+    // @arc4.abimethod
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_2 // 1
+    return
+
+
+// falcon_vault.FalconVault.submit_signature[routing]() -> void:
+submit_signature:
+    // contracts/falcon_vault.py:86
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    pushint 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // contracts/falcon_vault.py:96
+    // assert signer_index < self.num_signers.value, "Invalid signer index"
+    intc_0 // 0
+    bytec_0 // "num_signers"
+    app_global_get_ex
+    assert // check self.num_signers exists
+    dig 2
+    >
+    assert // Invalid signer index
+    // contracts/falcon_vault.py:98
+    // prop_key = b"prop_" + op.itob(proposal_id)
+    uncover 2
+    itob
+    bytec_3 // 0x70726f705f
+    dig 1
+    concat
+    // contracts/falcon_vault.py:99
+    // prop_bytes, exists = op.Box.get(prop_key)
+    dup
+    box_get
+    // contracts/falcon_vault.py:100
+    // assert exists, "Proposal does not exist"
+    assert // Proposal does not exist
+    // contracts/falcon_vault.py:103
+    // assert not prop.executed.native, "Already executed"
+    dup
+    pushint 384
+    getbit
+    pushbytes 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    dup
+    intc_0 // 0
+    getbit
+    !
+    assert // Already executed
+    // contracts/falcon_vault.py:105
+    // sig_key = b"sig_" + op.itob(proposal_id) + b"_" + op.itob(signer_index)
+    pushbytes 0x7369675f
+    dig 4
+    concat
+    pushbytes 0x5f
+    concat
+    uncover 6
+    itob
+    swap
+    dig 1
+    concat
+    // contracts/falcon_vault.py:106
+    // sig_data, sig_exists = op.Box.get(sig_key)
+    dup
+    box_len
+    bury 1
+    // contracts/falcon_vault.py:107
+    // assert not sig_exists, "Signer already approved"
+    !
+    assert // Signer already approved
+    // contracts/falcon_vault.py:109
+    // pk_key = b"pk_" + op.itob(signer_index)
+    bytec 5 // 0x706b5f
+    uncover 2
+    concat
+    // contracts/falcon_vault.py:110
+    // pubkey, pk_exists = op.Box.get(pk_key)
+    box_get
+    // contracts/falcon_vault.py:111
+    // assert pk_exists, "Signer public key not initialized"
+    assert // Signer public key not initialized
+    // contracts/falcon_vault.py:113-114
+    // # payload: itob(proposal_id) || recipient bytes || itob(amount)
+    // message = op.itob(proposal_id) + prop.recipient.bytes + op.itob(prop.amount.native)
+    dig 3
+    extract 0 32
+    uncover 6
+    dig 1
+    concat
+    dig 5
+    extract 32 8
+    swap
+    dig 1
+    concat
+    // contracts/falcon_vault.py:115
+    // assert op.falcon_verify(message, signature.bytes, pubkey), "Invalid Falcon-1024 signature"
+    uncover 8
+    uncover 4
+    falcon_verify
+    assert // Invalid Falcon-1024 signature
+    // contracts/falcon_vault.py:117
+    // op.Box.put(sig_key, Bytes(b"1"))
+    uncover 2
+    pushbytes 0x31
+    box_put
+    // contracts/falcon_vault.py:122
+    // approval_count=arc4.UInt64(prop.approval_count.native + 1),
+    uncover 3
+    pushint 40
+    extract_uint64
+    intc_2 // 1
+    +
+    itob
+    // contracts/falcon_vault.py:119-124
+    // new_prop = Proposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     approval_count=arc4.UInt64(prop.approval_count.native + 1),
+    //     executed=prop.executed
+    // )
+    cover 2
+    concat
+    swap
+    concat
+    swap
+    concat
+    // contracts/falcon_vault.py:125
+    // op.Box.put(prop_key, new_prop.bytes)
+    box_put
+    // contracts/falcon_vault.py:86
+    // @arc4.abimethod
+    intc_2 // 1
+    return
+
+
+// falcon_vault.FalconVault.execute_release[routing]() -> void:
+execute_release:
+    // contracts/falcon_vault.py:127
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // contracts/falcon_vault.py:130
+    // prop_key = b"prop_" + op.itob(proposal_id)
+    itob
+    bytec_3 // 0x70726f705f
+    swap
+    concat
+    // contracts/falcon_vault.py:131
+    // prop_bytes, exists = op.Box.get(prop_key)
+    dup
+    box_get
+    swap
+    dup
+    cover 2
+    cover 3
+    // contracts/falcon_vault.py:132
+    // assert exists, "Proposal does not exist"
+    assert // Proposal does not exist
+    // contracts/falcon_vault.py:135
+    // assert not prop.executed.native, "Already executed"
+    dup
+    pushint 384
+    getbit
+    pushbytes 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    intc_0 // 0
+    getbit
+    !
+    assert // Already executed
+    // contracts/falcon_vault.py:136
+    // assert prop.approval_count.native >= self.threshold.value, "Quorum not reached"
+    dup
+    extract 40 8
+    dig 1
+    pushint 40
+    extract_uint64
+    intc_0 // 0
+    bytec 4 // "threshold"
+    app_global_get_ex
+    assert // check self.threshold exists
+    >=
+    assert // Quorum not reached
+    // contracts/falcon_vault.py:139
+    // recipient=prop.recipient,
+    dig 1
+    extract 0 32
+    dup
+    cover 2
+    cover 5
+    // contracts/falcon_vault.py:140
+    // amount=prop.amount,
+    uncover 2
+    extract 32 8
+    // contracts/falcon_vault.py:138-143
+    // new_prop = Proposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     approval_count=prop.approval_count,
+    //     executed=arc4.Bool(True)
+    // )
+    uncover 2
+    swap
+    concat
+    swap
+    concat
+    // contracts/falcon_vault.py:142
+    // executed=arc4.Bool(True)
+    pushbytes 0x80
+    // contracts/falcon_vault.py:138-143
+    // new_prop = Proposal(
+    //     recipient=prop.recipient,
+    //     amount=prop.amount,
+    //     approval_count=prop.approval_count,
+    //     executed=arc4.Bool(True)
+    // )
+    concat
+    // contracts/falcon_vault.py:144
+    // op.Box.put(prop_key, new_prop.bytes)
+    box_put
+    // contracts/falcon_vault.py:146
+    // if self.asset_id.value == UInt64(0):
+    intc_0 // 0
+    bytec_1 // "asset_id"
+    app_global_get_ex
+    assert // check self.asset_id exists
+    bnz execute_release_else_body@4
+    // contracts/falcon_vault.py:147-151
+    // itxn.Payment(
+    //     receiver=prop.recipient.native,
+    //     amount=prop.amount.native,
+    //     fee=Global.min_txn_fee,
+    // ).submit()
+    itxn_begin
+    // contracts/falcon_vault.py:150
+    // fee=Global.min_txn_fee,
+    global MinTxnFee
+    // contracts/falcon_vault.py:149
+    // amount=prop.amount.native,
+    swap
+    // contracts/falcon_vault.py:140
+    // amount=prop.amount,
+    intc_3 // 32
+    // contracts/falcon_vault.py:149
+    // amount=prop.amount.native,
+    extract_uint64
+    itxn_field Amount
+    dig 1
+    itxn_field Receiver
+    // contracts/falcon_vault.py:147
+    // itxn.Payment(
+    intc_2 // pay
+    itxn_field TypeEnum
+    itxn_field Fee
+    // contracts/falcon_vault.py:147-151
+    // itxn.Payment(
+    //     receiver=prop.recipient.native,
+    //     amount=prop.amount.native,
+    //     fee=Global.min_txn_fee,
+    // ).submit()
+    itxn_submit
+
+execute_release_after_if_else@6:
+    // contracts/falcon_vault.py:127
+    // @arc4.abimethod
+    intc_2 // 1
+    return
+
+execute_release_else_body@4:
+    // contracts/falcon_vault.py:153-158
+    // itxn.AssetTransfer(
+    //     asset_receiver=prop.recipient.native,
+    //     asset_amount=prop.amount.native,
+    //     xfer_asset=Asset(self.asset_id.value),
+    //     fee=Global.min_txn_fee,
+    // ).submit()
+    itxn_begin
+    // contracts/falcon_vault.py:157
+    // fee=Global.min_txn_fee,
+    global MinTxnFee
+    // contracts/falcon_vault.py:155
+    // asset_amount=prop.amount.native,
+    swap
+    // contracts/falcon_vault.py:140
+    // amount=prop.amount,
+    intc_3 // 32
+    // contracts/falcon_vault.py:155
+    // asset_amount=prop.amount.native,
+    extract_uint64
+    // contracts/falcon_vault.py:156
+    // xfer_asset=Asset(self.asset_id.value),
+    intc_0 // 0
+    bytec_1 // "asset_id"
+    app_global_get_ex
+    assert // check self.asset_id exists
+    itxn_field XferAsset
+    itxn_field AssetAmount
+    dig 1
+    itxn_field AssetReceiver
+    // contracts/falcon_vault.py:153
+    // itxn.AssetTransfer(
+    pushint 4 // axfer
+    itxn_field TypeEnum
+    itxn_field Fee
+    // contracts/falcon_vault.py:153-158
+    // itxn.AssetTransfer(
+    //     asset_receiver=prop.recipient.native,
+    //     asset_amount=prop.amount.native,
+    //     xfer_asset=Asset(self.asset_id.value),
+    //     fee=Global.min_txn_fee,
+    // ).submit()
+    itxn_submit
+    b execute_release_after_if_else@6
