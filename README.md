@@ -2,7 +2,7 @@
 
 **The first complete Algorand-native post-quantum cryptography developer toolkit.**
 
-[![PyPI](https://img.shields.io/pypi/v/algo-pqc-kit)](https://pypi.org/project/algo-pqc-kit/0.3.0/)
+[![PyPI](https://img.shields.io/pypi/v/algo-pqc-kit)](https://pypi.org/project/algo-pqc-kit/0.3.1/)
 [![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue)](LICENSE-MIT)
 [![AVM](https://img.shields.io/badge/AVM-v12-green)](https://developer.algorand.org)
 [![PQC](https://img.shields.io/badge/crypto-Falcon--1024%20%7C%20FN--DSA-purple)](https://csrc.nist.gov/pubs/fips/206/final)
@@ -211,7 +211,7 @@ MIT OR Apache-2.0
 
 | Resource | URL |
 |---|---|
-| PyPI | https://pypi.org/project/algo-pqc-kit/0.3.0/ |
+| PyPI | https://pypi.org/project/algo-pqc-kit/0.3.1/ |
 | crates.io (engine) | https://crates.io/crates/falcon-multisig |
 | NIST FIPS 206 | https://csrc.nist.gov/pubs/fips/206/final |
 | Algorand PQC Brief | https://algorand.co/blog/technical-brief-quantum-resistant-transactions-on-algorand-with-falcon-signatures |
