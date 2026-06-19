@@ -29,3 +29,8 @@ artifacts/
 demo_account.json
 *key*.json
 *secret*.json
+
+# Build outputs
+dist/
+build/
+*.egg-info/
