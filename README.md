@@ -29,6 +29,16 @@ Algorand's AVM v12 (deployed November 2025) introduced the `falcon_verify` opcod
 pip install algo-pqc-kit
 ```
 
+## AlgoKit Template
+
+Start a new Post-Quantum project instantly using our official AlgoKit Copier template:
+
+```bash
+algokit init -t https://github.com/quantalabss/algokit-pqc-vault-template
+```
+
+This will scaffold a complete project with `algo-pqc-kit` pre-configured, including a clean FalconVault contract and deployment scripts ready for LocalNet or TestNet.
+
 ---
 
 ## Quick Start
