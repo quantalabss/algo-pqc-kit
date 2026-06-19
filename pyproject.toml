@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "algo-pqc-kit"
-version = "0.3.0"
+version = "0.3.1"
 description = "Algorand-native post-quantum cryptography developer toolkit — Falcon-1024 accounts, M-of-N multisig, and AVM smart contract templates"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
@@ -41,10 +41,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/quantachain/algo-pqc-kit"
+Homepage = "https://github.com/quantalabss/algo-pqc-kit"
 Documentation = "https://algo-pqc-kit.readthedocs.io"
-Repository = "https://github.com/quantachain/algo-pqc-kit"
-Issues = "https://github.com/quantachain/algo-pqc-kit/issues"
+Repository = "https://github.com/quantalabss/algo-pqc-kit"
+Issues = "https://github.com/quantalabss/algo-pqc-kit/issues"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

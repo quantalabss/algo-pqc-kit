@@ -27,4 +27,4 @@ from .multisig import FalconMultisig
 from .vault import PQCVault
 
 __all__ = ["FalconAccount", "FalconMultisig", "PQCVault"]
-__version__ = "0.3.0"
+__version__ = "0.3.1"
