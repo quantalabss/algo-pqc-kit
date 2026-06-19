@@ -87,11 +87,11 @@ def main():
             threshold=2,
             public_keys=[g1.public_key, g2.public_key, g3.public_key]
         )
-        print(f"✅ Vault App ID: {vault.app_id}")
-        print(f"✅ Vault Address: {vault.address}")
+        print(f"Vault App ID: {vault.app_id}")
+        print(f"Vault Address: {vault.address}")
         
     except Exception as e:
-        print(f"❌ Deployment failed: {e}")
+        print(f"Deployment failed: {e}")
         sys.exit(1)
 
     print("\nDeployment complete. Add these App IDs to your docs/deployments.md reference.")

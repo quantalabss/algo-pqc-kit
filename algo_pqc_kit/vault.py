@@ -49,12 +49,16 @@ class PQCVault:
             Configured vault pointing at the deployed contract.
         """
         try:
-            from algokit_utils import ApplicationClient, ApplicationSpecification
+            from algokit_utils import (
+                AppFactory, Arc56Contract, AlgorandClient,
+                AppFactoryParams, AppFactoryCreateMethodCallParams,
+                AppClientMethodCallParams
+            )
             from algosdk.atomic_transaction_composer import AccountTransactionSigner
             from algosdk import logic
             from pathlib import Path
         except ImportError:
-            raise ImportError("algokit-utils required: pip install algokit-utils")
+            raise ImportError("algokit-utils v4 required: pip install algokit-utils")
 
         app_spec_path = Path(__file__).parent.parent / "contracts" / "FalconVault.arc56.json"
         if not app_spec_path.exists():
@@ -68,23 +72,28 @@ class PQCVault:
         sender_address = address_from_private_key(private_key)
         signer = AccountTransactionSigner(private_key)
 
-        app_spec = ApplicationSpecification.from_json(app_spec_path.read_text())
+        app_spec = Arc56Contract.from_json(app_spec_path.read_text())
+        algorand = AlgorandClient.from_clients(algod=algod_client)
 
-        client = ApplicationClient(
-            algod_client=algod_client,
-            app_spec=app_spec,
-            signer=signer,
-            sender=sender_address,
+        factory = AppFactory(
+            AppFactoryParams(
+                app_spec=app_spec,
+                algorand=algorand,
+                default_sender=sender_address,
+                default_signer=signer,
+            )
         )
 
-        client.create(
-            call_abi_method="create",
-            threshold=threshold,
-            num_signers=len(public_keys),
+        result = factory.send.create(
+            AppFactoryCreateMethodCallParams(
+                method="create",
+                args=[threshold, len(public_keys)]
+            )
         )
 
-        app_id = client.app_id
-        app_address = logic.get_application_address(app_id)
+        app_client = result[0]
+        app_id = app_client.app_id
+        app_address = app_client.app_address
 
         # Fund the contract for box storage
         sp = algod_client.suggested_params()
@@ -93,13 +102,15 @@ class PQCVault:
         algod_client.send_transaction(ptxn.sign(private_key))
 
         # Add signers to box storage
+        # app_client is already set
         for index, pk in enumerate(public_keys):
             box_name = b"pk_" + index.to_bytes(8, "big")
-            client.call(
-                call_abi_method="add_signer_init",
-                index=index,
-                public_key=pk,
-                boxes=[(app_id, box_name)]
+            app_client.send.call(
+                AppClientMethodCallParams(
+                    method="add_signer_init",
+                    args=[index, pk],
+                    box_references=[box_name]
+                )
             )
 
         return cls(
