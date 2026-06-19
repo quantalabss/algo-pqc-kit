@@ -74,7 +74,7 @@ puyapy falcon_vault.py  # compiles to TEAL + ABI
 algokit deploy          # deploys to Testnet
 ```
 
-A treasury that releases ALGO or ASAs only when M-of-N Falcon-1024 signatures are verified **on-chain**. Uses replay-protected nonces. Immutable committee — no admin backdoor.
+A treasury that releases ALGO, ASAs, or executes arbitrary Application Calls when M-of-N Falcon-1024 signatures are verified **on-chain**. Features dynamic membership (add/remove signers via proposals) and uses replay-protected nonces.
 
 ### `FalconLsig` — PQC Logic Signature Account
 
@@ -82,7 +82,7 @@ The foundational primitive: a Logic Signature that embeds a Falcon-1024 public k
 
 ### `PQCDao` — Post-Quantum DAO Governance
 
-A complete DAO where every spending proposal requires M-of-N committee members to sign with their Falcon-1024 keys. No Ed25519 anywhere in the governance flow.
+A complete DAO where every spending proposal requires M-of-N committee members to sign with their Falcon-1024 keys. Features Voting Periods, Execution Delays (Timelocks), and explicit Yes/No voting choices. No Ed25519 anywhere in the governance flow.
 
 ---
 

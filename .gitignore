@@ -20,6 +20,12 @@ venv.bak/
 .vscode/
 *.swp
 *.swo
+docs/
 
-# Algorand/Puya outputs (optional, but usually good to commit artifacts for the user)
-# We will NOT ignore artifacts/ so the compiled TEAL is visible in the repo.
+# Algorand/Puya outputs
+artifacts/
+
+# Sensitive Info & Generated Keys
+demo_account.json
+*key*.json
+*secret*.json

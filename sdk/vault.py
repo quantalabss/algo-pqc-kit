@@ -49,16 +49,64 @@ class PQCVault:
         """
         # Import AlgoKit utils for deployment
         try:
-            from algokit_utils import ApplicationClient, Account
+            from algokit_utils import ApplicationClient, ApplicationSpecification
+            from algosdk.atomic_transaction_composer import AccountTransactionSigner, TransactionWithSigner
+            from algosdk import logic
+            from pathlib import Path
         except ImportError:
             raise ImportError("algokit-utils required: pip install algokit-utils")
 
-        # Compile and deploy the FalconVault contract
-        # (Requires puyapy to compile contracts/falcon_vault.py first)
-        raise NotImplementedError(
-            "Run: puyapy contracts/falcon_vault.py\n"
-            "Then use algokit deploy to push to Testnet.\n"
-            "See scripts/deploy_vault.py for the full deployment script."
+        app_spec_path = Path(__file__).parent.parent / "contracts" / "FalconVault.arc56.json"
+        if not app_spec_path.exists():
+            raise FileNotFoundError(f"Contract artifact not found at {app_spec_path}. Run puyapy contracts/falcon_vault.py")
+
+        private_key = deployer_account['sk']
+        from algosdk.account import address_from_private_key
+        sender_address = address_from_private_key(private_key)
+        signer = AccountTransactionSigner(private_key)
+
+        app_spec = ApplicationSpecification.from_json(app_spec_path.read_text())
+        
+        client = ApplicationClient(
+            algod_client=algod_client,
+            app_spec=app_spec,
+            signer=signer,
+            sender=sender_address,
+        )
+
+        client.create(
+            call_abi_method="create",
+            threshold=threshold,
+            num_signers=len(public_keys),
+            asset_id=asset_id,
+        )
+
+        app_id = client.app_id
+        app_address = logic.get_application_address(app_id)
+
+        # Fund the contract for box storage
+        sp = algod_client.suggested_params()
+        from algosdk.transaction import PaymentTxn
+        ptxn = PaymentTxn(sender_address, sp, app_address, 2_000_000)
+        algod_client.send_transaction(ptxn.sign(private_key))
+        
+        # Add signers to box storage
+        for index, pk in enumerate(public_keys):
+            # Box key is b"pk_" + itob(index)
+            box_name = b"pk_" + index.to_bytes(8, "big")
+            sp = algod_client.suggested_params()
+            client.call(
+                call_abi_method="add_signer",
+                index=index,
+                public_key=pk,
+                boxes=[(app_id, box_name)]
+            )
+
+        return cls(
+            app_id=app_id,
+            address=app_address,
+            threshold=threshold,
+            num_signers=len(public_keys)
         )
 
     @classmethod

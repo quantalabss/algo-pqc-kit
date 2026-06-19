@@ -31,6 +31,7 @@ requires-python = ">=3.10"
 dependencies = [
     "py-algorand-sdk>=2.7.0",
     "algokit-utils>=4.0.0",
+    "falcon-python",
 ]
 
 [project.optional-dependencies]
